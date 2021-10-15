@@ -2,57 +2,43 @@
 
 <html>  
     <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Xinlu Zhou's portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="Images/Logo.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157360543-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-157360543-1');
     </script>
 
-    <title> Xinlu Zhou's Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" href="Images/Logo.png"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
     </head>
 
     <body>
-    
-    <nav>
-        <div class="logo">
-            <a href="Index.html"><img src="Images/Logo.png"></a>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="#home_project">Project</a></li>
-            <li><a href="https://drive.google.com/file/d/1QTf5fbTvlfU6Dr8JS1kC34QA9gZB9j6q/view?ths=true">Resume</a></li>
-            <li><a href="#home_contact">Contact</a></li>
-        </ul>
-
-        <div id="burger" class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="Index.html"><img src="Images/Logo.png"></a></div>
+            <ul class="menu">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="#home_project">Work</a></li>
+                <li><a href="#">Playground</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#home_contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
     </nav>
-
-    <!-- <div id="particles-js">
-            <div class="homepage_text">
-            <h1>Hello there !</h1>
-            <h2>I am Xinlu(Daisy)</h2>
-            <div id="title_subtext">
-            <p>a <span class="blue">Product Designer</span>  and <span class="red">Front-End Developer</span> from UC San Diego with great interests in the intersections of 
-                Biology and Human-centered design. Passionate about bringing compelling ideas to life and solving the complex problems facing our world.</p>
-            </div>
-            </div>
-            <p><a href="#home_project"><i class="arrow down"></i></a></p>
-    </div> -->
 
     <div class="row">
         <div class="homepage_text">
@@ -67,11 +53,25 @@
         </div>
       </div>
 
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <h1>Hi, I am Daisy Zhou 
+                <h2>Master's Candidate @ Cornell Information Science</h2>
+                <div id="title_subtext">
+                <p>Welcome to my portfolio! I’m a <span class="blue">Product Designer</span> and <span class="red">Front-End Developer</span> who is passionate about bringing compelling ideas to life and solving the complex problems facing our world.</p>
+                </div>  
 
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
     <!-- <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script> -->
 
-    <!-- Project -->
+    <!-- Project section -->
     <div id="home_project">
         <section class="Project">
             <div class="picture-container-left">
@@ -172,9 +172,9 @@
                     <p>Don't be shy! I'd like to grab <span class="red">coffee</span><span class="blue"> :)</span> with you to talk about anything from design to tech, kpop music and food. Shoot me 
                     an email or connect me with any following social medias!</p>
                 </div>
-                <div class="grid-item-right">
+                <!-- <div class="grid-item-right">
                     <a><img src="Images/connect.png" height="400px" width="400px" ></a>
-                </div>
+                </div> -->
             </div>
         </section> 
 
@@ -189,7 +189,7 @@
               </div>
 
               <div id="copyright">
-                ©2019 Designed and coded with love by Xinlu(Daisy).
+                ©2021 Designed and coded with love by Xinlu(Daisy).
               </div>
     </div>
 
