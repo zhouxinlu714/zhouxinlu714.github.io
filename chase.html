@@ -10,16 +10,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+    <style>
+        .navbar{
+            position: relative; 
+        }
+    </style>
     </head>
 
     <body>
-
         <div class="banner-container" style=background-image:url(Images/chase-banner.jpg)>
             <div class="inner-container">
                 <h1>Chase App</h1>
                 <h2>UX&UI Redesign</h2>
             </div>
-            <nav>
+            <nav class="navbar">
+                <div class="max-width">
+                    <div class="logo"><a href="Index.html"><img src="Images/Logo.png"></a></div>
+                    <ul class="menu">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="#home_project">Work</a></li>
+                        <li><a href="#">Playground</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#home_contact">Contact</a></li>
+                    </ul>
+                    <div class="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            </nav>
+            <!-- <nav>
                 <div class="logo">
                     <a href="index.html"><img src="Images/Logo.png"></a>
                 </div>
@@ -36,8 +54,7 @@
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                
-            </nav>
+            </nav> -->
         </div>
 
         <div class="banner-introduction">
@@ -406,14 +423,6 @@
                     
                 </div>
             </div>
-            
-
         </div>
-
-
-     
-
-
-
     </body>
 </html>
