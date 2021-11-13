@@ -1,186 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href = "style.css">
 
-<html>  
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Xinlu Zhou's portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" href="Images/Logo.png"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157360543-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-157360543-1');
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+<title>Daisy's portfolio</title>
+
+  </head>
+  <body>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('.navbar');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-dark', 'shadow');
+        } else {
+          nav.classList.remove('bg-dark', 'shadow');
+        }
+      });
     </script>
+  
+    
+    <!--  ======================= Start Header Area ============================== -->
+    <nav class = "navbar navbar-expand-lg navbar-dark py-4 fixed-top">
+        <div class = "container">
+            <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50", height="50"></a>
+            <button type = "button" class = "navbar-toggler border-0" data-bs-toggle = "collapse" data-bs-target = "#menuContent">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
 
-    </head>
-
-    <body>
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="Index.html"><img src="Images/Logo.png"></a></div>
-            <ul class="menu">
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="#home_project">Work</a></li>
-                <li><a href="#">Playground</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#home_contact">Contact</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
+            <div class = "collapse navbar-collapse" id = "menuContent">
+                <ul class = "navbar-nav ms-auto text-center">
+                    <li class = "nav-item mx-lg-2">
+                        <a class = "nav-link text-white fs-5" href = "index2.html">Home</a>
+                    </li>
+                    <li class = "nav-item mx-lg-3">
+                        <a class = "nav-link text-white fs-5" href = "#features">Features</a>
+                    </li>
+                    <li class = "nav-item mx-lg-3">
+                        <a class = "nav-link text-white fs-5" href = "about.html">About</a>
+                    </li>
+                    <li class = "nav-item mx-lg-3">
+                        <a class = "nav-link text-white fs-5" href = "https://drive.google.com/file/d/1Zr4vHn1HAIcHggkGxrzpaHAY7Pn_1ypf/view?usp=sharing">Resume</a>
+                    </li>
+                    <li class = "nav-item mx-lg-2">
+                        <a class = "nav-link text-white fs-5" href = "#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
+        </div>
     </nav>
 
-    <div class="row">
-        <div class="homepage_text">
-            <h1>Hi, I am<br>Daisy Zhou</h1>
-            <h2>Master's Candidate @ Cornell Information Science</h2>
-            <div id="title_subtext">
-            <p>Welcome to my portfolio! I’m a <span class="blue">Product Designer</span> and <span class="red">Front-End Developer</span> who is passionate about bringing compelling ideas to life and solving the complex problems facing our world.</p>
-            </div>  
-            </div>
-        <div class="homepage_img">
-          <img src="Images/home.png" width="100%">
+    <!--  ======================= Banner Area ============================== -->
+    <div class="banner pt-5 min-vh-100">
+      <!-- <div class="bg">
+        <iframe src='https://my.spline.design/untitled-11070219f45e1732f2e5cb1e32af3152/' frameborder='0' width='100%' height='100%'></iframe>
+        </div> -->
+    <div class="banner-content justify-content-center">
+        <div class="row justify-content-center mt-md-5">
+          <div class="col-lg-8 text-white site-title">
+            <h1 class="title-text">Hi, I am <span class="text-uppercase">Daisy</span></h1>
+            <!-- <h2 class="title-text mt-4">Master's Candidate @ Cornell Information Science</h2> -->
+            <p class="title-text mt-4">Welcome to my portfolio! I’m a <span>Product Designer</span> who is passionate about bringing compelling ideas to life and solving the complex problems facing our world.</p>
+          </div>
+          <!-- <div class="col-lg-6">
+            <img src="Images/home.png" alt="banner-img" class="img-fluid" width="90%">
+          </div> -->
         </div>
-      </div>
-
-    <!-- home section -->
-    <!-- <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <h1>Hi, I am Daisy Zhou 
-                <h2>Master's Candidate @ Cornell Information Science</h2>
-                <div id="title_subtext">
-                <p>Welcome to my portfolio! I’m a <span class="blue">Product Designer</span> and <span class="red">Front-End Developer</span> who is passionate about bringing compelling ideas to life and solving the complex problems facing our world.</p>
-                </div>  
-
-            </div>
-        </div>
-    </section> -->
-
-    <script src="script.js"></script>
-    <!-- <script type="text/javascript" src="particles.js"></script>
-    <script type="text/javascript" src="app.js"></script> -->
-
-    <!-- Project section -->
-    <div id="home_project">
-        <section class="Project">
-            <div class="picture-container-left">
-                <div class="grid-item">
-                    <a href="chase.html"><img src="Images/chase.jpg" width="80%"></a>
-                </div>
-                <div id="project-content">
-                    <a id="name" href="" style="color:aliceblue;">Chase Case Study </a>
-                    <p id="description" style="color:aliceblue;">Redesign the budget control feature in Chase 
-                        bank mobile application that helps a specific type of users to save for a major upcoming high-cost purchase. </p>
-                </div>
-            </div>
-        </section> 
-
-        <section class="Project">
-            <div class="picture-container-right">
-                <div id="project-content">
-                    <a id="name" href="" style="color:aliceblue;">idlego IOS App</a>
-                    <p id="description" style="color:aliceblue;">An second-hand items trading platform that enables 
-                            students to exchange thier idles efficiently. </p>
-                    </div>
-                <div class="grid-item-right">
-                    <a href="idlego.html"><img src="Images/idlego.jpg" width="80%" height="auto"></a>
-                </div>
-            </div>
-        </section> 
-
-        <section class="Project">
-            <div class="picture-container-left">
-                <div class="grid-item">
-                    <a href="triplec.html"><img src="Images/Official.jpg" width="80%"></a>
-                </div>
-                <div id="project-content">
-                    <a id="name" href="" style="color:aliceblue;">Triple C Official Website </a>
-                    <p id="description" style="color:aliceblue;">Triple C official website is the central branding hub for an organization(Chinese Computer Community) in UCSD. </p>
-                </div>
-            </div>
-        </section> 
-
-        <section class="Project">
-            <div class="picture-container-right">
-                <div id="project-content">
-                    <a id="name" href="" style="color:aliceblue;">SDAF X-plore</a>
-                    <p id="description" style="color:aliceblue;">An interactive tour-based mobile application centered on key architectural achievements on the UCSD campus. </p>
-                    </div>
-                <div class="grid-item-right">
-                    <a href="SDAF.html"><img src="Images/SDAF.jpg" width="80%"></a>
-                </div>
-            </div>
-        </section> 
-
-        <section class="Project">
-            <div class="picture-container-left">
-                <div class="grid-item">
-                    <a href="sephora.html"><img src="Images/sephora.jpg" width="80%" ;></a>
-                </div>
-                <div id="project-content">
-                    <a id="name" href="" style="color:aliceblue;">Sephora Case Study </a>
-                    <p id="description" style="color:aliceblue;">Redesign the gift selection feature in Sephora mobile app that help 
-                        cosmetic newbies locating and making the most satisfying gift choice for friends and families during holiday season. </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="Project">
-            <div class="picture-container-right">
-                <div id="project-content">
-                    <a id="name" href="" style="color:aliceblue;">I-resource</a>
-                    <p id="description" style="color:aliceblue;">Design an online document for the international student community in order to make any resources in UCSD campus are
-                    transparent to this group. </p>
-                    </div>
-                <div class="grid-item-right">
-                    <a href="iresource.html"><img src="Images/I-Resource.jpg" width="80%"></a>
-                </div>
-            </div>
-        </section> 
-
-       
-        <section class="Project">
-            <div class="picture-container-left">
-                <div class="grid-item">
-                    <a href="expedia.html"><img src="Images/expedia.jpg" width="80%"></a>
-                </div>
-                <div id="project-content">
-                    <a id="name" href="" style="color:aliceblue;">Expedia Case Study </a>
-                    <p id="description" style="color:aliceblue;">Redesign the buddle function in Expedia mobile app that
-                        allows users to easily understand the process of selecting a bundle. </p>
-                </div>
-            </div>
-        </section> 
+        <div id=mouse_body>
+            <div id=mouse_wheel href="#features"></div>
+          </div>
+          <h4 style=" color: white;
+          text-align: center;
+          margin-top: 10px">Scroll Down</h4>
     </div>
-    
-    <div id='home_contact'>
+    </div>
+
+    <!--  =======================  Project Area ============================== -->
+    <div class="project" id="features">
+    <h1 class="section-title text-white text-center" data-outlined = "Feature Project">Feature Project</h1>
+    <div class="work text-white">
+        <div class="box box1 ">
+            <a class="no-hover " href="chase.html">
+                <div class="project-info text-white">
+                  <h3>Chase Case Study</h3>
+                 <p class="description fs-5 .text-secondary">
+                  <span style="color: rgb(235, 235, 235);">Redesign the budget control feature in Chase bank mobile application </span>
+                </p>
+                <span class="badge bg-light text-dark fs-6">UX</span>
+                <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Case Study</span>
+              </div>
+              </a>
+        </div>
+
+        <div class="box box2">
+          <a class="no-hover " href="idlego.html">
+            <div class="project-info text-white">
+              <h3>IdleGo IOS App</h3>
+             <p class="description fs-5 .text-secondary" style="color: rgb(235, 235, 235);">
+              <span>An second-hand items trading platform that enables students to exchange thier idles efficiently. </span>
+            </p>
+            <span class="badge bg-light text-dark fs-6">UX</span>
+            <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Mobile</span>
+          </div>
+          </a>
+        </div>
+        <div class="box box3">
+          <a class="no-hover " href="chase.html">
+            <div class="project-info text-white">
+              <h3>X-plore</h3>
+             <p class="description fs-5 .text-secondary">
+              <span style="color: rgb(235, 235, 235);">An interactive tour-based mobile application centered on key architectural achievements on the UCSD campus.</span>
+            </p>
+            <span class="badge bg-light text-dark fs-6">UX</span>
+            <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Case Study</span>
+          </div>
+          </a>
+        </div>
+        <div class="box box4">
+          <a class="no-hover " href="sephora.html">
+            <div class="project-info text-white">
+              <h3>Sephora Case Study</h3>
+             <p class="description fs-5 .text-secondary">
+              <span style="color: rgb(235, 235, 235);">
+                Helping users to make better gift choices by redesign the gift selection feature</span>
+            </p>
+            <span class="badge bg-light text-dark fs-6">UX</span>
+            <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Case Study</span>
+          </div>
+          </a>
+         </div>
+  </div>
+</div>
+    <!--  =======================  Skill Area ============================== -->
+    <!-- <h1 class="section-title text-white text-center" data-outlined = "Skills">Skills</h1> -->
+
+
+    <!--  =======================  Contact Area ============================== -->
+    <div class='home_contact text-white text-center' id="contact">
         <section class="Contact">
             <div class="contact-container">
-                <div id="home_contact">
-                    <h2>Let's Connect</h2>
+                <div id="home_contact col-lg-6 col-sm-12">
+                    <h1 class="section-title text-white text-center" data-outlined = "Let's Connect">Let's Connect</h1>
                     <p>Don't be shy! I'd like to grab <span class="red">coffee</span><span class="blue"> :)</span> with you to talk about anything from design to tech, kpop music and food. Shoot me 
                     an email or connect me with any following social medias!</p>
                 </div>
-                <!-- <div class="grid-item-right">
-                    <a><img src="Images/connect.png" height="400px" width="400px" ></a>
-                </div> -->
             </div>
         </section> 
 
             <div class="wrap">
                 <div class="social">
-                    <a href="mailto:zhouxinlu0714@gmail.com"><i class="icon-envelope-alt em"></i></a>
+                    <a href="mailto:xz633@cornell.edu"><i class="icon-envelope-alt em"></i></a>
                     <a href="https://www.linkedin.com/in/zhouxinlu"><i class="icon-linkedin li"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=100008406016915"><i class="icon-facebook fb"></i></a>
                     <a href="https://www.instagram.com/xinlu_zhou/"><i class="icon-instagram ins"></i></a>
@@ -193,13 +177,5 @@
               </div>
     </div>
 
-    
-              
-    </body>
-    <script type="text/javascript" src="particles.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="navigation.js"></script>
+  </body>
 </html>
-
-
-
