@@ -1,3 +1,8 @@
+:root{
+    --lg-font: 'Work Sans', sans-serif;
+    --sm-font: 'Roboto', sans-serif;
+}
+
 * {
     margin: 0;
     /* height: 100%; */
@@ -29,7 +34,7 @@ body {
 
 .inner-container h1 {
     font-size: 3em;
-    font-family: 'Helvetica', sans-serif;
+    /* font-family:  var(--sm-font); */
     font-weight: 500;
 
 }
@@ -40,7 +45,7 @@ body {
     font-size: 1.5em;
     text-align: left;
     font-weight: 400;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
 }
 
 @media only screen and (max-width: 920px) {
@@ -67,7 +72,7 @@ body {
     padding-left: 20%;
     padding-right: 20%;
     color: black;
-    font-family: 'Raleway', sans-serif;
+    font-family:  var(--sm-font);
     
 }
 
@@ -90,7 +95,8 @@ body {
     font-size:1.6em;
     text-align: center;
     /* font-family: 'Raleway', sans-serif; */
-    font-family: 'Boogaloo', cursive;
+    font-family: var(--title-font);
+    /* font-family: 'Boogaloo', cursive; */
     font-weight: 300;
     font-style: italic;
 }

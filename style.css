@@ -70,6 +70,13 @@ h1, h2, h3{
 .banner-content {
   margin-top: 200px;
 }
+
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
 /* bg {
   height: 100vh;
   position: relative;
@@ -98,7 +105,7 @@ iframe{
 }
 
 .site-title p {
-    font-size:2.3rem;
+    font-size:2.1rem;
     color: rgb(224, 224, 224);
     font-family: var(--sm-font);
     padding-top: 1rem;

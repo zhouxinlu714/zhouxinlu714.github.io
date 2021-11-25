@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color:white !important;
+}
+
+.banner-container {
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.project-title{
+    padding-left: 10%;
+    margin-top: 10%;
+}
+
+.section-title{
+    font-family: 'Boogaloo', cursive;
+    font-weight: 300;
+}

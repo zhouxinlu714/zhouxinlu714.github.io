@@ -1,181 +1,197 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel = "stylesheet" href = "style.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-<title>Daisy's portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
 
-  </head>
-  <body>
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      var nav = document.querySelector('.navbar');
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-      window.addEventListener('scroll', function () {
-        if (window.pageYOffset > 100) {
-          nav.classList.add('bg-dark', 'shadow');
-        } else {
-          nav.classList.remove('bg-dark', 'shadow');
-        }
-      });
-    </script>
-  
-    
-    <!--  ======================= Start Header Area ============================== -->
-    <nav class = "navbar navbar-expand-lg navbar-dark py-4 fixed-top">
-        <div class = "container">
-            <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50", height="50"></a>
-            <button type = "button" class = "navbar-toggler border-0" data-bs-toggle = "collapse" data-bs-target = "#menuContent">
-                <span class = "navbar-toggler-icon"></span>
-            </button>
+  <title>Daisy's portfolio</title>
 
-            <div class = "collapse navbar-collapse" id = "menuContent">
-                <ul class = "navbar-nav ms-auto text-center">
-                    <li class = "nav-item mx-lg-2">
-                        <a class = "nav-link text-white fs-5" href = "index2.html">Home</a>
-                    </li>
-                    <li class = "nav-item mx-lg-3">
-                        <a class = "nav-link text-white fs-5" href = "#features">Features</a>
-                    </li>
-                    <li class = "nav-item mx-lg-3">
-                        <a class = "nav-link text-white fs-5" href = "about.html">About</a>
-                    </li>
-                    <li class = "nav-item mx-lg-3">
-                        <a class = "nav-link text-white fs-5" href = "https://drive.google.com/file/d/1Zr4vHn1HAIcHggkGxrzpaHAY7Pn_1ypf/view?usp=sharing">Resume</a>
-                    </li>
-                    <li class = "nav-item mx-lg-2">
-                        <a class = "nav-link text-white fs-5" href = "#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+</head>
 
-    <!--  ======================= Banner Area ============================== -->
-    <div class="banner pt-5 min-vh-100">
-      <!-- <div class="bg">
+<body>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navbar").style.backgroundColor = "orange";
+        document.getElementById("navbar").style.height = "65px";
+      } else {
+        document.getElementById("navbar").style.backgroundColor = "transparent";
+      }
+    }
+  </script>
+
+
+  <!--  ======================= Start Header Area ============================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-4 fixed-top" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50" , height="50"></a>
+      <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menuContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuContent">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link text-white fs-5" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-lg-3">
+            <a class="nav-link text-white fs-5" href="#features">Features</a>
+          </li>
+          <li class="nav-item mx-lg-3">
+            <a class="nav-link text-white fs-5" href="about.html">About</a>
+          </li>
+          <li class="nav-item mx-lg-3">
+            <a class="nav-link text-white fs-5"
+              href="https://drive.google.com/file/d/1Zr4vHn1HAIcHggkGxrzpaHAY7Pn_1ypf/view?usp=sharing">Resume</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link text-white fs-5" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--  ======================= Banner Area ============================== -->
+  <div class="banner pt-5 min-vh-100">
+    <!-- <div class="bg">
         <iframe src='https://my.spline.design/untitled-11070219f45e1732f2e5cb1e32af3152/' frameborder='0' width='100%' height='100%'></iframe>
         </div> -->
     <div class="banner-content justify-content-center">
-        <div class="row justify-content-center mt-md-5">
-          <div class="col-lg-8 text-white site-title">
-            <h1 class="title-text">Hi, I am <span class="text-uppercase">Daisy</span></h1>
-            <!-- <h2 class="title-text mt-4">Master's Candidate @ Cornell Information Science</h2> -->
-            <p class="title-text mt-4">Welcome to my portfolio! I’m a <span>Product Designer</span> who is passionate about bringing compelling ideas to life and solving the complex problems facing our world.</p>
-          </div>
-          <!-- <div class="col-lg-6">
+      <div class="row justify-content-center mt-md-5">
+        <div class="col-lg-8 text-white site-title">
+          <h1 class="title-text">Hi, I am <span class="text-uppercase">Daisy</span></h1>
+          <!-- <h2 class="title-text mt-4">Master's Candidate @ Cornell Information Science</h2> -->
+          <p class="title-text mt-4">Welcome to my portfolio! I’m a <span>Product Designer</span> who is passionate
+            about bringing compelling ideas to life and solving the complex problems facing our world.</p>
+        </div>
+        <!-- <div class="col-lg-6">
             <img src="Images/home.png" alt="banner-img" class="img-fluid" width="90%">
           </div> -->
-        </div>
-        <div id=mouse_body>
-            <div id=mouse_wheel href = "#features"></div>
-          </div>
-          <h4 style=" color: white;
+      </div>
+      <div id=mouse_body>
+        <div id=mouse_wheel href="#features"></div>
+      </div>
+      <h4 style=" color: white;
           text-align: center;
           margin-top: 10px">Scroll Down</h4>
     </div>
-    </div>
+  </div>
 
-    <!--  =======================  Project Area ============================== -->
-    <div class="project" id="features">
-    <h1 class="section-title text-white text-center" data-outlined = "Feature Project">Feature Project</h1>
+  <!--  =======================  Project Area ============================== -->
+  <div class="project" id="features">
+    <h1 class="section-title text-white text-center" data-outlined="Feature Project">Feature Project</h1>
     <div class="work text-white">
-        <div class="box box1 ">
-            <a class="no-hover " href="chase.html">
-                <div class="project-info text-white">
-                  <h3>Chase Case Study</h3>
-                 <p class="description fs-5 .text-secondary">
-                  <span style="color: rgb(235, 235, 235);">Redesign the budget control feature in Chase bank mobile application </span>
-                </p>
-                <span class="badge bg-light text-dark fs-6">UX</span>
-                <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Case Study</span>
-              </div>
-              </a>
-        </div>
-
-        <div class="box box2">
-          <a class="no-hover " href="idlego.html">
-            <div class="project-info text-white">
-              <h3>IdleGo IOS App</h3>
-             <p class="description fs-5 .text-secondary" style="color: rgb(235, 235, 235);">
-              <span>An second-hand items trading platform that enables students to exchange thier idles efficiently. </span>
-            </p>
-            <span class="badge bg-light text-dark fs-6">UX</span>
-            <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Mobile</span>
-          </div>
-          </a>
-        </div>
-        <div class="box box3">
-          <a class="no-hover " href="chase.html">
-            <div class="project-info text-white">
-              <h3>X-plore</h3>
-             <p class="description fs-5 .text-secondary">
-              <span style="color: rgb(235, 235, 235);">An interactive tour-based mobile application centered on key architectural achievements on the UCSD campus.</span>
+      <div class="box box1 ">
+        <a class="no-hover " href="chase.html">
+          <div class="project-info text-white">
+            <h3>Chase Case Study</h3>
+            <p class="description fs-5 .text-secondary">
+              <span style="color: rgb(235, 235, 235);">Redesign the budget control feature in Chase bank mobile
+                application </span>
             </p>
             <span class="badge bg-light text-dark fs-6">UX</span>
             <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Case Study</span>
           </div>
-          </a>
-        </div>
-        <div class="box box4">
-          <a class="no-hover " href="sephora.html">
-            <div class="project-info text-white">
-              <h3>Sephora Case Study</h3>
-             <p class="description fs-5 .text-secondary">
+        </a>
+      </div>
+
+      <div class="box box2">
+        <a class="no-hover " href="idlego.html">
+          <div class="project-info text-white">
+            <h3>IdleGo IOS App</h3>
+            <p class="description fs-5 .text-secondary" style="color: rgb(235, 235, 235);">
+              <span>An second-hand items trading platform that enables students to exchange thier idles efficiently.
+              </span>
+            </p>
+            <span class="badge bg-light text-dark fs-6">UX</span>
+            <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Mobile</span>
+          </div>
+        </a>
+      </div>
+      <div class="box box3">
+        <a class="no-hover " href="chase.html">
+          <div class="project-info text-white">
+            <h3>X-plore</h3>
+            <p class="description fs-5 .text-secondary">
+              <span style="color: rgb(235, 235, 235);">An interactive tour-based mobile application centered on key
+                architectural achievements on the UCSD campus.</span>
+            </p>
+            <span class="badge bg-light text-dark fs-6">UX</span>
+            <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Case Study</span>
+          </div>
+        </a>
+      </div>
+      <div class="box box4">
+        <a class="no-hover " href="sephora.html">
+          <div class="project-info text-white">
+            <h3>Sephora Case Study</h3>
+            <p class="description fs-5 .text-secondary">
               <span style="color: rgb(235, 235, 235);">
                 Helping users to make better gift choices by redesign the gift selection feature</span>
             </p>
             <span class="badge bg-light text-dark fs-6">UX</span>
             <span class="badge bg-light text-dark fs-6" style="margin-left: 8px">Case Study</span>
           </div>
-          </a>
-         </div>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
-    <!--  =======================  Skill Area ============================== -->
-    <!-- <h1 class="section-title text-white text-center" data-outlined = "Skills">Skills</h1> -->
+  <!--  =======================  Skill Area ============================== -->
+  <!-- <h1 class="section-title text-white text-center" data-outlined = "Skills">Skills</h1> -->
 
 
-    <!--  =======================  Contact Area ============================== -->
-    <div class='home_contact text-white text-center' id="contact">
-        <section class="Contact">
-            <div class="contact-container">
-                <div id="home_contact col-lg-6 col-sm-12">
-                    <h1 class="section-title text-white text-center" data-outlined = "Let's Connect">Let's Connect</h1>
-                    <p>Don't be shy! I'd like to grab <span class="red">coffee</span><span class="blue"> :)</span> with you to talk about anything from design to tech, kpop music and food. Shoot me 
-                    an email or connect me with any following social medias!</p>
-                </div>
-            </div>
-        </section> 
+  <!--  =======================  Contact Area ============================== -->
+  <div class='home_contact text-white text-center' id="contact">
+    <section class="Contact">
+      <div class="contact-container">
+        <div id="home_contact col-lg-6 col-sm-12">
+          <h1 class="section-title text-white text-center" data-outlined="Let's Connect">Let's Connect</h1>
+          <p>Don't be shy! I'd like to grab <span class="red">coffee</span><span class="blue"> :)</span> with you to
+            talk about anything from design to tech, kpop music and food. Shoot me
+            an email or connect me with any following social medias!</p>
+        </div>
+      </div>
+    </section>
 
-            <div class="wrap">
-                <div class="social">
-                    <a href="mailto:xz633@cornell.edu"><i class="icon-envelope-alt em"></i></a>
-                    <a href="https://www.linkedin.com/in/zhouxinlu"><i class="icon-linkedin li"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100008406016915"><i class="icon-facebook fb"></i></a>
-                    <a href="https://www.instagram.com/xinlu_zhou/"><i class="icon-instagram ins"></i></a>
-                    <a href="https://drive.google.com/file/d/1H4pcd4EBEQeObUK0flV6CcjX58qdCNI0/view?usp=sharing"><i class="icon-file-text re"></i></a>
-                </div>
-              </div>
-
-              <div id="copyright">
-                ©2021 Designed and coded with love by Xinlu(Daisy).
-              </div>
+    <div class="wrap">
+      <div class="social">
+        <a href="mailto:xz633@cornell.edu"><i class="icon-envelope-alt em"></i></a>
+        <a href="https://www.linkedin.com/in/zhouxinlu"><i class="icon-linkedin li"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100008406016915"><i class="icon-facebook fb"></i></a>
+        <a href="https://www.instagram.com/xinlu_zhou/"><i class="icon-instagram ins"></i></a>
+        <a href="https://drive.google.com/file/d/1H4pcd4EBEQeObUK0flV6CcjX58qdCNI0/view?usp=sharing"><i
+            class="icon-file-text re"></i></a>
+      </div>
     </div>
 
-  </body>
+    <div id="copyright">
+      ©2021 Designed and coded with love by Xinlu(Daisy).
+    </div>
+  </div>
+
+</body>
+
 </html>
