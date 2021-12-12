@@ -204,7 +204,7 @@ margin-top: 24px;
 	text-align: center;
 	position: relative;
 }
-.section-title::before {
+/* .section-title::before {
 	content: attr(data-outlined);
 	position: absolute;
 	left: 2%;
@@ -217,10 +217,13 @@ margin-top: 24px;
 	letter-spacing: 0.4rem;
 
 	color: transparent;
-	/* -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.103); */
   -webkit-text-stroke: 1.5px #f8b6009a;
   opacity: 70%;
 	z-index: -1;
+} */
+
+.no-hover {
+  opacity: 1!important;
 }
 
 @media screen and (max-width: 667px){
@@ -251,7 +254,7 @@ margin-top: 24px;
 
 .box2{
   height: 40em; 
-  background-image: url(Images/idlego.png);
+  background-image: url(Images/assurant.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
