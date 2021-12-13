@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 * {
     margin: 0;
@@ -7,12 +7,23 @@
 
 body {
     width: 100%;
-    background-color:white !important;
+    background-color:rgb(248, 248, 248) !important;
     font-family: opensans;
+    line-height: 1.75!important;
 }
 
+.row-full{
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+}
+
+section {
+    margin-bottom: 150px;
+}
 .banner-container {
-    height: 500px;
+    height: 700px;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,17 +31,31 @@ body {
     position: relative;
 }
 
+
 .project-title{
     font-family: 'Ubuntu', sans-serif;
     padding-left: 10%;
     margin-top: 10%;
 }
 
+.project-title h1{
+    font-size: 64px;
+}
+
+.project-title h5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: rgb(221, 221, 221);
+    font-weight: 300;
+}
+
 .section-title{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
+    margin-bottom: 16px;
 }
 
 .section-content{
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
 }
