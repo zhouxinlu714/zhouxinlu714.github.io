@@ -20,7 +20,7 @@ body {
 }
 
 section {
-    margin-bottom: 150px;
+    margin-bottom: 125px;
 }
 .banner-container {
     height: 700px;
@@ -35,7 +35,7 @@ section {
 .project-title{
     font-family: 'Ubuntu', sans-serif;
     padding-left: 10%;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .project-title h1{
@@ -51,12 +51,22 @@ section {
 
 .section-title{
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 16px;
-    font-size: 3rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-subtitle{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    margin-top: 32px;
+
 }
 
 .section-content{
     font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
 
 }
