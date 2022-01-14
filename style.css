@@ -276,6 +276,15 @@ margin-top: 24px;
   background-size: cover;
   background-position: center;
 }
+
+.box5{
+  height: 30em;
+  background-image: url(Images/sleegal.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /* .work .box{
     background: #333;
     padding: 20px;
