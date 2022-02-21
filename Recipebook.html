@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="project3.css">  
+    <link rel="stylesheet" href="project4.css">  
     <link rel="icon" href="images/logo_black.png">
 
     <!-- Bootstrap CSS -->
@@ -18,15 +18,6 @@
 
     <!-- aos CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
-    <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 
     <title>Daisy's portfolio</title>
 
@@ -40,13 +31,16 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./script.js"></script>
 
-    <div class="banner-container overflow-hidden" data-aos="fade-up" style=background-color:#ffaf38>
-        <img class="position-absolute" src="Images/chase-mock1.png" style="width:500px; left: 40%; bottom: -45%;">
-        <img class="position-absolute" src="Images/chase-mock2.png" style="width:500px; left: 60%; bottom: -35%;">
+    <div class="banner-container overflow-hidden" style=background-color:#ffaf38>
+        <img class="position-absolute" src="images/recipebook/rb-banner.png" style="width:90%;left: 30%;bottom: -30%;" data-aos="fade-up" data-aos-duration="2000" >
         <div class="project-title text-white position-absolute">
+            
             <h1>Recipebook</h1>
-            <h6>+UI/UX Design +Web application</h6>
+            <span class="badge rounded-pill bg-light text-dark">UI/UX Design</span>
+            <span class="badge rounded-pill bg-light text-dark">User Research</span>
+            <span class="badge rounded-pill bg-light text-dark">App design & development</span>
         </div>
+
         <nav class="navbar navbar-expand-lg navbar-dark py-4">
             <div class="container">
                 <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50" , height="50"></a>
@@ -81,11 +75,11 @@
 
     <div class="main-content col-8 mx-auto mt-5">
         <!--  ======================= Overview ============================== -->
-        <section id="overview" class="mt-5">
-            <div class="section-title" style="color:#EFAF00">Overview</div>
-            <div class="row section-content text-secondary">
+        <section id="overview" class="mt-5" >
+            <div class="section-title text-center" style="color:#EFAF00" >Overview</div>
+            <div class="row section-content">
                 <div class="col-7">
-                    Have you ever returned home from a long day of classes, wanting to prepare your favorite cuisine but ending up with ramen owing to a lack of ingredients in the refrigerator? This happened so many times when I was in college. When students enter college and start living by themselves, they felt frustrated to balance life and study since chores like grocery shopping and cooking can seem very overwhelming at first. This results in unhealthy eating habits such as eating out frequently and skipping meals.
+                    <span class="bold">Have you ever returned home from a long day of classes, wanting to prepare your favorite cuisine but ending up with ramen owing to a lack of ingredients in the refrigerator?</span> This happened so many times when I was in college. When students enter college and start living by themselves, they felt frustrated to balance life and study since chores like grocery shopping and cooking can seem very overwhelming at first. This results in unhealthy eating habits such as eating out frequently and skipping meals.
                 </div>
                 <div class="col-5">
                     <p>
@@ -112,7 +106,7 @@
                     <img src="Images/hmw.svg" style="padding-top: 1em;" width=50% alt="Daisy">
                 </div>
                 <div class="col-9" style="color:#EFAF00">
-                    <h1><em></em>How might we design a way for college students to cook cooked meals more regularly and consistently?</em></h1>
+                    <h1><em>How might we design a way for college students to cook cooked meals more regularly and consistently?</em></h1>
                 </div>
             </div>
         </section>
@@ -172,16 +166,16 @@
         <!--  ======================= Research ============================== -->
         <section id="research" class="mt-5">
             <div class="section-title" style="color:#165DA4">Research</div>
-            <div class="section-content text-secondary">
+            <div class="section-content">
                 Before the project started, we conducted several brief, unstructured interviews with individuals who we could find immediately around us, in order to figure out their pain points and needs. Thus, for our first round of user research, we conducted 8 user interviews and then came together as a team to discuss the insights. 
-                <div class="mx-auto mt-3" style="width: 800px;">
+                <div class="mx-auto mt-3" style="width: 800px;" data-aos="fade-up" data-aos-duration="3000">
                     <img src="Images/recipebook/interview1.png" alt="Daisy" width="100%">
                 </div>
 
                 <h3 class="text-dark section-subtitle">Interview & Affinity Mapping </h3>
                 To better understand how students cook in their daily life and identify potential problems, I advocated for conducting Semi-structured Interviews first before diving into solutions. I also encouraged our developers to join us for affinity mapping sessions so that we could brainstorm solutions as a group based on our results.
                 <div class="mx-auto mt-3" style="width: 800px;">
-                    <img src="Images/recipebook/affinity.jpg" alt="Daisy" width="100%">
+                    <img src="Images/recipebook/affinity.jpg" alt="Daisy" width="100%" data-aos="fade-up" data-aos-duration="2000">
                 </div>
 
                 <h3 class="text-dark section-subtitle">Main pain points faced</h3>
@@ -198,7 +192,7 @@
 
                 <h4 class="text-dark section-subtitle">Personas</h4>
                 <p>We sythesized the research insights and created two personas to help the entire team better understanding who we're designing for.</p>
-                <img src="Images/recipebook/Persona.png" alt="Daisy" width="100%">
+                <img src="Images/recipebook/Persona.png" alt="Daisy" width="100%" data-aos="fade-up" data-aos-duration="2000">
                     
                 <h4 class="text-dark section-subtitle">Define</h4>
                 <h5><strong>Problem Statement</strong></h5> 
@@ -216,20 +210,137 @@
         <!--  ======================= Ideation ============================== -->
         <section id="research" class="mt-5">
             <div class="section-title" style="color:#165DA4">Ideation</div>
-            <div class="section-content text-secondary">
+            <div class="section-content">
+                <div class="row justify-content-center">
+                    <div class="col-6 ">
+                        <p class=>We conducted persuasive design as a team to determine the primary potential barriers that prevent individuals from engaged in our target activity. Then, we started brainstorming different ideas that can bring positive behavioral change by either increasing position motivators and simplicity or eliminating factors of demotivation. In this situation, we want to make it easier for users to plan their meals by reducing the time it takes to find quick and inexpensive affordable recipes and allow them to prepare with less effort. Then, we brainstormed ideas individually and categorized similar ones into groups. 
+                        </p>
+                    </div>
+                    <div class="col-6" data-aos="fade-left" data-aos-duration="2000">
+                        <img src="images/recipebook/persuasive-design.png" alt="" width="60%">
+                    </div>
+                  </div>
+
+                  <div class="row justify-content-center mt-5 contain">
+                    <div class="col-6" data-aos="fade-right" data-aos-duration="2000">
+                        <img src="images/recipebook/ideation.png" class="mx-auto" alt="" width="70%">
+                    </div>
+                    <div class="col-6">
+                        <p>After coming up with 37 ideas in total, we decided to use the Impact & Effort matrix template to prioritize them in order of importance and assess their feasibility. Then we narrow down top 3 ideas from our 12 different concept sketches: 
+                        </p>
+                        <ol>
+                            <li>Meal plan + shopping list</li>
+                            <li>Scan ingredient to get recipes recommendation</li>
+                            <li>Upload recipe</li>
+                        </ol>
+                    </div>
+                  </div>
+
+                  <h5>Paper Sketch & Wireframe</h5>
+                  <p> After I finished the information architecture, I started looking into the paper wireframe that allows me to visualize how each component and visual element should be positioned on the page.  It also gave me a chance to think about information hierarchy that I can present the content and function in a more structured way.  I had a bunch of discussions with the team and I iterated the wireframes to make it more concise and align with everybody's expectation.
+                  </p>
+                    <figure>
+                    <img src="Images/recipebook/sketch.png" class="mx-auto d-block" alt="Daisy" width="70%" data-aos="fade-up" data-aos-duration="2000">
+                    <figcaption class="text-center">ideas sketch</figcaption>
+                    </figure>
+
+                    <h3>User flow</h3>
+                        <p>
+                        Now that we had an idea from our minimum viable prototype, we sketched out some ideas and thought about what our app and user interface might look like.
+                    </p>
+                        
+                        We decided to call out 3 main features:
+                        <ol>
+                            <li>Meal plan + shopping list : where students could easily plan their weekly meals, get a shopping list with them in market, and let the app picks recipes from your saved lists.</li>
+                            <li> Scan ingredient to get recipes recommendation : where students can learn new ingredient and get recommended recipes to cook it.</li>
+                            <li>Upload personal recipe: where students can upload their personal recipes by inputting steps and link, or share link to family and friends to get their secret recipes.</li>
+                        </ol>
+                    <figure>
+                        <img src="Images/recipebook/user-flow.png" class="mx-auto d-block" alt="Daisy" width="70%" data-aos="fade-up" data-aos-duration="2000">
+                        <figcaption class="text-center">User-flow</figcaption>
+                    </figure>
+    
+
+                    <figure>
+                        <img src="Images/recipebook/wireframe.png" class="mx-auto d-block" alt="Daisy" width="80%" data-aos="fade-up" data-aos-duration="2000">
+                        <figcaption class="text-center">Wireframe</figcaption>
+                    </figure>
             </div>
         </section>
 
 
-        <!--  ======================= Usability Test ============================== -->
-        
+        <!--  ======================= Evaluation & Iteration ============================== -->
+        <section>
+            <div class="section-title" style="color:#165DA4">Evaluation & Iteration</div>
+            <div class="section-content">
+                <p>To evaluate the usability of our app, our team conducted 5 user tests with some of our wireframes and initial designs with participants. We summarized our main findings below.</p>
+                <div class="row">
+                    <div class="col-sm">
+                        Problem 1: 5/5 users had a hard time finding the "upload recipe" button. While we were conducting user testing, almost all of our participants mentioned they would like to see this button in an evident place that can attract their attention.
+
+                    </div>
+                    <div class="col-sm">
+                        Problem 2: No clear feedbacks on actions. 5/5 users mentioned that they were not sure if the recipe was added to the meal plan/favorite list successfully. Occasionally we observed that users would switch to certain pages to confirm recipes were successfully added.
+
+                    </div>
+                    <div class="col-sm">col-sm
+                        Problem 3: Users prefer to browse the recipes first and add it to meal plan. We found that our users meal planned one week ahead max.
+                    </div>
+                  </div>
+            <h3>Iteration</h3>
+            <p>In order to address the issues uncovered above, we revised our final sketches as such</p>
+            <div>
+                <h4>Iteration 1</h4>
+                <p>I changed "Find a recipe" to "Add recipes" because generally people are more familiar with the word “add” and it’s more consistent with user flow that they actually choose recipes from their saved list. 
+                    <br>
+                    Even though the scrollable calendar on the top enabled users to pick between day of the week and date, we thought that 7 tabs on the top navigation would be crowded on smaller devices. We've also noticed that most users only remember the day of the week rather than the precise date. As a result, we replaced it with a weekday tab on the left with a larger clickable area and a short statement to inform users of the month's week.
+                    <br>
+                    we also change the meal plan to second tab since user said they want to explore different recipe when they landing on app rather than seeing empty meal plan.  </p>
+                    <img src="images/recipebook/iteration1.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000">
+            </div>
+            <div>
+                <h4>Iteration 2</h4>
+                <p>In order to address the lack of feedback，we propose to give confirmation messages in the form of pop-up windows to inform users that activities have been completed successfully,. The message "You've successfully uploaded a recipe" will appear in the popup window.</p>
+                <img src="images/recipebook/iteration2.png" alt="" width="100%" data-aos="fade-left" data-aos-duration="2000">
+            </div>
+           
+            <div>
+                <h4>Iteration 3</h4>
+                <p>Users takes more than 1 mins in average, in finding how to create their own recipe and invite their friends to edit together and they mentioned that the pop-up buttons are so confused that they barely understand the meaning. Therefore, we integrate the upload image and friend invitation to one page, users would be able to create their recipe in simple steps.</p>
+                <img src="images/recipebook/iteration3.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000">
+            </div>
+            </div>
+ 
+
 
     
+            
+        </section>
+    
         <!-- Final Design -->
+        <section>
+            <div class="section-title" style="color:#165DA4">Final design</div>
+            <h2>Onboarding</h2>
+            <img src="images/recipebook/onboarding.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000">
+            <h2>scenario 1: Make meal plan</h2>
+            <img src="images/recipebook/mealplan.png" alt="" width="100%" data-aos="fade-left" data-aos-duration="2000">
+
+            <h2>scenario 2: Seach ingredient</h2>
+            <img src="images/recipebook/explore.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000"> 
+
+            <h2>scenario 3: Upload personal recipe </h2>
+            <img src="images/recipebook/saved.png" alt="" width="100%" data-aos="fade-left" data-aos-duration="2000">
+
+          <div class="text-center">
+            <button type="button" class="btn btn-outline-primary">View figma prototype</button>
+        </div>
+        </section>
 
 
         <!-- Reflection -->
-
+        <section>
+            <div class="section-title" style="color:#165DA4">Learning&Reflection</div>
+        </section>
 
     </div>
 </body>

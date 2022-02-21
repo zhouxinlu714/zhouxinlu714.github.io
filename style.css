@@ -250,10 +250,11 @@ margin-top: 24px;
 
 .box1{
   height: 30em;
-  background-image: url(Images/chase.png);
+  background-image: url(Images/recipebook/recipebook.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .box2{
