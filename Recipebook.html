@@ -32,7 +32,7 @@
     <script src="./script.js"></script>
 
     <div class="banner-container overflow-hidden" style=background-color:#ffaf38>
-        <img class="position-absolute" src="Images/recipebook/rb-banner.png" style="width:90%;left: 30%;bottom: -30%;" data-aos="fade-up" data-aos-duration="2000" >
+        <img class="position-absolute" src="Images/recipebook/rb-banner.png" style="width:90%;left:30%;bottom: -30%;" data-aos="fade-up" data-aos-duration="2000" >
         <div class="project-title text-white position-absolute">
             
             <h1>Recipebook</h1>
@@ -165,7 +165,7 @@
 
         <!--  ======================= Research ============================== -->
         <section id="research" class="mt-5">
-            <div class="section-title text-center" style="color:#165DA4">Research</div>
+            <div class="section-title text-center" style="color:#EFAF00">Research</div>
             <div class="section-content">
                 Before the project started, we conducted several brief, unstructured interviews with individuals who we could find immediately around us, in order to figure out their pain points and needs. Thus, for our first round of user research, we conducted 8 user interviews and then came together as a team to discuss the insights. 
                 <div class="mx-auto mt-3" style="width: 800px;" data-aos="fade-up" data-aos-duration="3000">
@@ -236,7 +236,7 @@
                     </div>
                   </div>
 
-                  <h5>Paper Sketch & Wireframe</h5>
+                  <p class="text-dark section-subtitle">Paper Sketch & Wireframe</p>
                   <p> After I finished the information architecture, I started looking into the paper wireframe that allows me to visualize how each component and visual element should be positioned on the page.  It also gave me a chance to think about information hierarchy that I can present the content and function in a more structured way.  I had a bunch of discussions with the team and I iterated the wireframes to make it more concise and align with everybody's expectation.
                   </p>
                     <figure>
@@ -244,7 +244,8 @@
                     <figcaption class="text-center">ideas sketch</figcaption>
                     </figure>
 
-                    <h3>User flow</h3>
+                    <p class="text-dark section-subtitle">User flow</p>
+
                         <p>
                         Now that we had an idea from our minimum viable prototype, we sketched out some ideas and thought about what our app and user interface might look like.
                     </p>
@@ -273,6 +274,7 @@
         <section>
             <div class="section-title text-center" style="color:#EFAF00">Evaluation & Iteration</div>
             <div class="section-content">
+                <p class="text-dark section-subtitle">User Testing</p>
                 <p>To evaluate the usability of our app, our team conducted 5 user tests with some of our wireframes and initial designs with participants. We summarized our main findings below.</p>
                 <div class="row">
                     <div class="col-sm">
@@ -283,14 +285,15 @@
                         Problem 2: No clear feedbacks on actions. 5/5 users mentioned that they were not sure if the recipe was added to the meal plan/favorite list successfully. Occasionally we observed that users would switch to certain pages to confirm recipes were successfully added.
 
                     </div>
-                    <div class="col-sm">col-sm
+                    <div class="col-sm">
                         Problem 3: Users prefer to browse the recipes first and add it to meal plan. We found that our users meal planned one week ahead max.
                     </div>
                   </div>
-            <h3>Iteration</h3>
+
+            <p class="text-dark section-subtitle">Iteration</p>
             <p>In order to address the issues uncovered above, we revised our final sketches as such</p>
             <div>
-                <h4>Iteration 1</h4>
+                <h4 class="mt-3">Iteration 1</h4>
                 <p>I changed "Find a recipe" to "Add recipes" because generally people are more familiar with the word “add” and it’s more consistent with user flow that they actually choose recipes from their saved list. 
                     <br>
                     Even though the scrollable calendar on the top enabled users to pick between day of the week and date, we thought that 7 tabs on the top navigation would be crowded on smaller devices. We've also noticed that most users only remember the day of the week rather than the precise date. As a result, we replaced it with a weekday tab on the left with a larger clickable area and a short statement to inform users of the month's week.
@@ -299,13 +302,13 @@
                     <img src="Images/recipebook/iteration1.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000">
             </div>
             <div>
-                <h4>Iteration 2</h4>
+                <h4 class="mt-3">Iteration 2</h4>
                 <p>In order to address the lack of feedback，we propose to give confirmation messages in the form of pop-up windows to inform users that activities have been completed successfully,. The message "You've successfully uploaded a recipe" will appear in the popup window.</p>
                 <img src="Images/recipebook/iteration2.png" alt="" width="100%" data-aos="fade-left" data-aos-duration="2000">
             </div>
            
             <div>
-                <h4>Iteration 3</h4>
+                <h4 >Iteration 3</h4>
                 <p>Users takes more than 1 mins in average, in finding how to create their own recipe and invite their friends to edit together and they mentioned that the pop-up buttons are so confused that they barely understand the meaning. Therefore, we integrate the upload image and friend invitation to one page, users would be able to create their recipe in simple steps.</p>
                 <img src="Images/recipebook/iteration3.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000">
             </div>
@@ -320,15 +323,15 @@
         <!-- Final Design -->
         <section>
             <div class="section-title text-center" style="color:#EFAF00">Final design</div>
-            <h2>Onboarding</h2>
+            <!-- <h2>Onboarding</h2> -->
             <img src="Images/recipebook/onboarding.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000">
-            <h2>scenario 1: Make meal plan</h2>
+            <h4>scenario 1: Make meal plan</h4>
             <img src="Images/recipebook/mealplan.png" alt="" width="100%" data-aos="fade-left" data-aos-duration="2000">
 
-            <h2>scenario 2: Seach ingredient</h2>
+            <h4>scenario 2: Seach ingredient</h4>
             <img src="Images/recipebook/explore.png" alt="" width="100%" data-aos="fade-right" data-aos-duration="2000"> 
 
-            <h2>scenario 3: Upload personal recipe </h2>
+            <h4>scenario 3: Upload personal recipe </h4>
             <img src="Images/recipebook/saved.png" alt="" width="100%" data-aos="fade-left" data-aos-duration="2000">
 
           <!-- <div class="text-center">
@@ -338,9 +341,37 @@
 
 
         <!-- Reflection -->
-        <!-- <section>
-            <div class="section-title" style="color:#165DA4">Learning&Reflection</div>
-        </section> -->
+        <section>
+            <div class="section-title" style="color:#EFAF00">Learning&Reflection</div>
+            <div class="section-content">
+            <div class="row">
+                <div class="col-3">
+            What I learned 
+        </div>
+        <div class="col-9">
+        <strong>Team efficiency & Communication</strong>
+        <p>We employed agile methodology to complete this project from user research, UX design, to create interactive prototype with vue.js at final stage. Even though the team was splitter into designers and developers, it is important to help the entire team better understanding who we're designing for and product vision.</p>
+
+        <strong>Feedback </strong>
+        <p>Feedback is a key indicator of user experience design. It can provide users comfort, confidence, and a sense of security, which allows them to trust the product and gain more motivation while using with it. </p>
+        </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        Where to improve
+</div>
+<div class="col-9">
+<strong>Improve meal plan</strong>
+<p>I wish to conduct more user testings and iterate on the final design including the label and graphics.</p>
+
+<strong>Recruitment </strong>
+<p>Recruit members who are familiar with front-end development, back-end development to refine this application to usable phase.
+</p>
+</div>
+</div>
+</div>
+        </section>
 
     </div>
 </body>
