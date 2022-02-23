@@ -45,7 +45,7 @@ body {
 
 .welcome h1{
   font-family: var(--lg-font);
-  font-size: 60px;
+  font-size: 5em;
   font-weight: 500;
 }
 
@@ -243,7 +243,7 @@ a:hover {
 .box3 {
   height: 40em;
   margin-top: -10em;
-  background-image: url(Images/SDAF.jpg);
+  background-image: url(Images/chase.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center
@@ -713,6 +713,7 @@ margin-top: 24px;
         float: left;
         padding-left: 15px;
         color: rgb(226, 226, 226);
+        font-size: 1em;
       }
   
       .content__container__list {
