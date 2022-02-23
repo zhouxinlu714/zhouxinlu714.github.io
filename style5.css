@@ -1,0 +1,220 @@
+
+
+:root {
+    font-size: 11px
+}
+
+*,::after,::before {
+    box-sizing: border-box
+}
+
+body,html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth
+}
+
+body {
+    background-color: #fff;
+    font-family: Inter;
+    color: #171717
+}
+
+/* h2 {
+    font-size: 36px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1em;
+    position: relative;
+    font-weight: 800;
+    padding: 1em
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    background: #000;
+    width: 30px;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 0 -15px
+} */
+
+h3 {
+    font-size: 14px;
+    font-weight: 700
+}
+
+p {
+    font-size: 16px
+}
+
+a:active,a:link,a:visited {
+    color: #171717;
+    text-decoration: none
+}
+
+a:hover {
+    opacity: .5;
+    transition: all ease .3s
+}
+
+hr {
+    border: .7px solid #efefef
+}
+
+
+#grid {
+    background-color: #f5f9fb
+}
+
+#work {
+    width: 100vw;
+    max-width: 1600px;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 10em 5em
+}
+
+#work>div {
+    display: flex;
+    flex-basis: calc(40% - 100px);
+    padding: 3em
+}
+
+@media screen and (max-width: 667px) {
+    #work {
+        padding:5em;
+        display: block
+    }
+
+    #work>div {
+        padding: 1em
+    }
+
+    .box {
+        max-width: 500px;
+        max-height: 500px
+    }
+}
+
+@media screen and (max-width: 568px) {
+    #work {
+        padding:1em
+    }
+
+    .box {
+        max-height: 400px
+    }
+}
+
+.box {
+    position: relative;
+    margin: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,.05);
+    border-radius: 10px;
+    top: 0;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    transition: all ease .5s
+}
+
+.box:hover {
+    transform: scale(1.03);
+    position: relative;
+    top: -10px;
+    transition: all ease .5s
+}
+
+.box1 {
+    height: 50em;
+    background: #834dc3;
+    background-image: url(../assets/alchemi/preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.box2 {
+    height: 65em;
+    background: #c21a19;
+    background-image: linear-gradient(rgba(255,255,255,.05),rgba(255,255,255,.05)),url(../assets/target/newtarget.png);
+    background-size: cover;
+    background-position: center
+}
+
+.box3 {
+    height: 65em;
+    margin-top: -10em;
+    background-image: url(../assets/homio/preview1.png);
+    background-size: 120%
+}
+
+.box4 {
+    height: 50em;
+    margin-top: 5em;
+    background: #4e65a7;
+    background-image: linear-gradient(rgba(255,255,255,.05),rgba(255,255,255,.05)),url(../assets/explorecurrent/gif.gif);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: center bottom
+}
+
+@media screen and (max-width: 1233px) {
+    .box3 {
+        margin-top:5em
+    }
+}
+
+.project-info {
+    position: absolute;
+    color: #f2f2f2
+}
+
+.no-hover {
+    opacity: 1!important
+}
+
+.metadata {
+    font-size: 14px;
+    font-weight: 200
+}
+
+.description,.locked-description,.progress-description {
+    position: relative;
+    color: #f2f2f2;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: left;
+    width: 13em;
+    top: .5em
+}
+
+.etc {
+    top: -.5em
+}
+
+.box1:hover .description span,.box2:hover .locked-description span,.box3:hover .description span,.box4:hover .progress-description span {
+    display: none
+}
+
+.box4:hover .progress-description:before {
+    content: "View additional work"
+}
+
+.box2:hover .locked-description:before {
+    content: "View case study 🔒"
+}
+
+.box1:hover .description:before,.box3:hover .description:before {
+    content: "View case study"
+}
+
+
