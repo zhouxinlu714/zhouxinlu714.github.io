@@ -1,0 +1,1036 @@
+<html>
+<head>
+    <title>INFO 3300/5100 - Project 3</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image:  linear-gradient(45deg,
+            rgba(3, 41, 58, 0.815),
+            rgba(17, 23, 43, 0.877)
+            ),url(./icons/background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+
+    h1{
+        position: relative;
+        top:22px;
+        text-align: center;
+        font-weight: 800;
+        font-size: 28px;
+        color: rgb(255, 255, 255);
+    }
+    h3{
+        text-align: center;
+        font-weight: 400;
+        color: rgb(204, 204, 204);
+    }
+
+    .gridlines line {
+        /* stroke: #ccc; */
+        stroke: rgb(122, 122, 122);
+        stroke-dasharray: 6;
+    }
+
+    .gridlines .domain {
+        stroke: none;
+    }
+    .annotation {
+        font-size: smaller;
+        fill: black;
+    }
+    .div container{
+        width: 1400px;
+        position: relative;
+    }
+
+    .axisBrown line{
+      stroke: white;
+    }
+
+    .axisBrown path{
+      stroke: white;
+    }
+
+    .axisBrown text{
+      fill: white;
+      font-size: 12;
+    }
+    .arc_path{
+        stroke: white;
+        stroke-width: 2px;
+    }
+    .arc_text{
+        fill:white;
+    }
+
+    button {
+      display:inline-block;
+      color: white;
+      font-family:'Roboto',sans-serif;
+      width: 285px;
+      height: 50px;
+      padding:0.5em 1.8em;
+      border: 2px solid #EBDECF;
+      border-radius:20px;
+      word-spacing: normal;
+      text-transform: none;
+      text-indent: 0.5px;
+      text-shadow: none;
+      text-align: center;
+      cursor: default;
+      transition: all 0.2s;
+      font-size: 15px;
+      margin-left: 20px;
+      margin-top: 3px;
+      box-shadow: 0 6px #A3B5D6;
+    }
+    button:first-child{
+        margin-left: 50px;
+    }
+    button:hover{
+      border-color: rgb(126, 126, 126);
+      opacity: 0.5;
+    }
+    button:focus{
+      text-decoration:none;
+      outline: none;
+    }
+    button:active {
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+    .mode {
+        position: absolute;
+        top:40px;
+        right: 14px;
+        color:white;
+    }
+    .title {
+        height: 80px;
+        background-color: #091C2B;
+    }
+    .icon{
+        position: absolute;
+        top: 23px;
+        left:550px;
+
+    }
+    .switch {
+        position: absolute;
+        top:20px;
+        right: 20px;
+        display: inline-block;
+        width: 70px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 30px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    input:checked + .slider {
+        background-color: white;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px white;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(36px);
+        background-color: black;
+    }
+    .choosetype {
+        margin-left: 65px;
+        font-weight: 500;
+        color: rgb(204, 204, 204);
+        font-size: 24px;
+    }
+    .area{
+        fill: url(#salary-gradient);
+        stroke-width: 0px;
+        opacity: 0.8;
+    }
+    .chartTitle{
+        fill: rgb(226, 252, 255);
+        font-size: 20px;
+    }
+
+    .tooltip {
+      font: 12px Helvetica;
+    }
+    .hoverline{
+        stroke:white;
+    }
+
+
+</style>
+<script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = "90%"
+        }
+</script>
+<body onload="zoom()">
+    <div class="title">
+        <h1>US Developer Career Guide</h1>
+    </div>
+
+    <div class="icon">
+        <!-- <img src="./icons/book_icon.svg" style="height: 28px;"> -->
+        <img src="./icons/book.png" style="height: 45px;">
+    </div>
+    <p class="mode" id="p1">Dark Mode</p>
+    <h3> ***It may take 3-5 seconds to load the diagram due to the huge data*** </h3>
+    <p class ="choosetype">Choose your developer type below...</p>
+    <div id="mybutton" ></div><br>
+    <div id="mybutton2"></div>
+    <div id = "container" class="container">
+        <svg id = "line" height="600" width="900" style="margin-left:20px"></svg>
+        <svg id = "anno" height="600" width="600"></svg>
+    </div>
+    <label class="switch">
+        <input type="checkbox" id="mycheck", onclick="themeChange()" checked>
+        <span class="slider round"></span>
+    </label>
+    <script>
+        function themeChange() {
+            var checkBox = document.getElementById("mycheck");
+            console.log(checkBox.checked);
+            var stylesheet = document.styleSheets[0];
+            console.log(stylesheet);
+            if(!checkBox.checked) {
+                document.getElementById("p1").innerHTML = "Light Mode";
+                stylesheet.cssRules[0].style.backgroundImage = "linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%)";
+                //stylesheet.cssRules[1].style.color = "black";
+                stylesheet.cssRules[2].style.color = "black";
+                stylesheet.cssRules[9].style.cssText = "fill: black;";
+                stylesheet.cssRules[8].style.cssText = "stroke: black;";
+                stylesheet.cssRules[7].style.cssText = "stroke: black;";
+                stylesheet.cssRules[10].style.cssText = "stroke: black; stroke-width: 2px;";
+                stylesheet.cssRules[11].style.cssText = "fill: black;";
+                //stylesheet.cssRules[12].style.cssText = "display: inline-block; color: black; font-family: Roboto, sans-serif; width: 12em; padding: 0.5em 1.8em; margin: 0.1em 0.3em 0.3em 0.1em; border: 2px solid black; border-radius: 2em; word-spacing: normal; text-transform: none; text-indent: 0.5px; text-shadow: none; text-align: center; cursor: default; transition: all 0.2s ease 0s; font-size: 15px;"
+                //stylesheet.cssRules[17].style.color = "black";
+                //stylesheet.cssRules[12].style.cssTex = "display: inline-block; color: white; font-family: Roboto, sans-serif; width: 285px; height: 50px; padding: 0.5em 1.8em; border: 2px solid rgb(235, 222, 207); border-radius: 20px; word-spacing: normal; text-transform: none; text-indent: 0.5px; text-shadow: none; text-align: center; cursor: default; transition: all 0.2s ease 0s; font-size: 15px; margin-left: 20px; margin-top: 3px; box-shadow: #E4EBF7 0px 6px;"
+                stylesheet.cssRules[12].style.boxShadow =  "#CCD7EE 0px 6px"
+                stylesheet.cssRules[29].style.color = "black";
+                stylesheet.cssRules[31].style.cssText = "fill: black;font-size: 20px;";
+                stylesheet.cssRules[20].style.backgroundColor = "rgb(89, 126, 247)";
+                stylesheet.cssRules[33].style.cssText = "stroke: black;";
+            }
+            else {
+                document.getElementById("p1").innerHTML = "Dark Mode"
+                stylesheet.cssRules[0].style.backgroundImage ="linear-gradient(45deg, rgba(3, 41, 58, 0.816), rgba(17, 23, 43, 0.88)), url('./icons/background.jpg')"
+                stylesheet.cssRules[1].style.color = "white";
+                stylesheet.cssRules[2].style.color = "rgb(204, 204, 204)";
+                stylesheet.cssRules[9].style.cssText = "fill: white; font-size: 12px;";
+                stylesheet.cssRules[8].style.cssText = "stroke: white;";
+                stylesheet.cssRules[7].style.cssText = "stroke: white;";
+                stylesheet.cssRules[10].style.cssText = "stroke: white; stroke-width: 2px;";
+                stylesheet.cssRules[11].style.cssText = "fill: white;";
+                //stylesheet.cssRules[12].style.cssText = "display: inline-block; color: white; font-family: Roboto, sans-serif; width: 12em; padding: 0.5em 1.8em; margin: 0.1em 0.3em 0.3em 0.1em; border: 2px solid rgb(235, 222, 207); border-radius: 2em; word-spacing: normal; text-transform: none; text-indent: 0.5px; text-shadow: none; text-align: center; cursor: default; transition: all 0.2s ease 0s; font-size: 15px;"
+                stylesheet.cssRules[17].style.color = "white";
+                stylesheet.cssRules[12].style.boxShadow =  "#A3B5D6 0px 6px"
+                stylesheet.cssRules[29].style.color = "rgb(204, 204, 204)";
+                stylesheet.cssRules[31].style.cssText = "fill: rgb(226, 252, 255);font-size: 20px;";
+                stylesheet.cssRules[20].style.backgroundColor = "rgb(9, 28, 43)"
+                stylesheet.cssRules[33].style.cssText = "stroke: white;";
+            }
+
+        }
+        const linesvg = d3.select("svg#line");
+        const annosvg = d3.select("svg#anno");
+        const width = linesvg.attr("width");
+        const height = linesvg.attr("height");
+        const margin = {top: 70, right: 60, bottom: 60, left: 90};
+        const chartWidth = width - margin.left-margin.right;
+        const chartHeight = height - margin.top - margin.bottom;
+        const ranksWidth = annosvg.attr("width");
+        const ranksHeight = annosvg.attr("height");
+        const ranksMargin = {top: 70, right: 10, bottom: 10, left: 60};
+        const ranksChartWidth = ranksWidth - ranksMargin.left - ranksMargin.right;
+        const ranksChartHeight = ranksHeight - ranksMargin.top - ranksMargin.bottom;
+        let annotations = linesvg.append("g").attr("id","annotations");
+        let chartArea = linesvg.append("g").attr("id","points")
+                        .attr("transform",`translate(${margin.left},${margin.top})`);
+        let ranksChartArea = annosvg.append("g").attr("id","ranks")
+                        .attr("transform",`translate(${ranksMargin.left},${ranksMargin.top})`);
+
+
+        d3.csv("./survey_results_public.csv", d3.autoType).then(data => {
+            //import dataset
+            var surveyResult = data
+            console.log(surveyResult)
+
+            //clean dataset 64461=>7715
+            surveyResult = surveyResult.map(function(obj) {
+                    return {
+                        Country: obj.Country,
+                        DevType: obj.DevType,
+                        EdLevel: obj.EdLevel,
+                        LanguageWorkedWith: obj.LanguageWorkedWith,
+                        Salary: obj.ConvertedComp,
+                        YearsCodePro: obj.YearsCodePro
+                    }
+                    });
+
+             // clean data
+            surveyResult = surveyResult.filter((d) => { return d['Country'] === 'United States' && d['Salary'] != 'NA' && d['DevType'] != 'NA' && d['EdLevel'] != 'NA' && d['LanguageWorkedWith'] != 'NA'&& d['Salary'] != 'NA' && d['Salary'] != 0 && d['YearsCodePro'] != 'NA' });
+            console.log(surveyResult)
+            var backend = [];
+            var frontend = [];
+            var fullstack = [];
+            var embedded = [];
+            var dataScientistEngineer = [];
+            var businessAnalyst = [];
+            var devOps = [];
+            var pm = [];
+            surveyResult.forEach(d=>{
+                //split devtype string
+                d['DevType'] = d['DevType'].split(";");
+
+                //create different dataset
+                d['DevType'].forEach((type, i) => {
+                    if(type === "Developer, back-end"){
+                        backend.push(d)
+                    }
+                    if(type === "Developer, front-end"){
+                        frontend.push(d)
+                    }
+                    if(type === "Developer, full-stack"){
+                        fullstack.push(d)
+                    }
+                    if(type === "Developer, embedded applications or devices"){
+                        embedded.push(d)
+                    }
+                    if(type === "Engineer, data" || type ==="Data scientist or machine learning specialist"){
+                        dataScientistEngineer.push(d)
+                    }
+                    if(type === "Data or business analyst" ){
+                        businessAnalyst.push(d)
+                    }
+                    if(type === "DevOps specialist" || type === "Engineer, site reliability"){
+                        devOps.push(d)
+                    }
+                    if(type === "Product manager"){
+                        pm.push(d)
+                    }
+                })
+            })
+            console.log("survey result", surveyResult)
+            console.log(pm)
+
+            //axis
+            const yearGroupExtent = ['1-2 years','3-5 years','5-10 years','10-15 years','15-20 years','20+ years'];
+            const yearGroupScale = d3.scaleBand().domain(yearGroupExtent).range([0, chartWidth]).paddingInner(1).paddingOuter(0.1).align(0);
+
+            const salaryExtent = d3.extent(surveyResult, d => d['Salary']);
+            const salaryScale = d3.scaleLinear().domain([70000,180000]).range([chartHeight, 0]);
+            const roleScale = d3.scaleOrdinal().domain(["all","backend","frontend","fullstack","embedded","dataScientistEngineer","businessAnalyst","devOps","pm"]).range(["#597EF7","#FAAD14","#FF7946","#F5222D","#7CB305","#4152A7","#9254DC","#A3B5D6","#E9BABF"]);
+
+            function compute_salary_group (data) {
+              Allyear_salary = {};
+              for(i=0;i<yearGroupExtent.length;i++) {
+                year_group = yearGroupExtent[i];
+                Allyear_salary[year_group] = [];
+              }
+
+              data.forEach((d, i) => {
+                if (d['YearsCodePro']===1 || d['YearsCodePro']===2) {
+                    Allyear_salary['1-2 years'].push(d.Salary);
+                } else if (d['YearsCodePro']>=3 && d['YearsCodePro']<=5) {
+                    Allyear_salary['3-5 years'].push(d.Salary);
+                } else if (d['YearsCodePro']>5 && d['YearsCodePro']<=10) {
+                    Allyear_salary['5-10 years'].push(d.Salary);
+                } else if (d['YearsCodePro']>10 && d['YearsCodePro']<=15) {
+                    Allyear_salary['10-15 years'].push(d.Salary);
+                } else if (d['YearsCodePro']>15 && d['YearsCodePro']<=20) {
+                    Allyear_salary['15-20 years'].push(d.Salary);
+                } else if (d['YearsCodePro'] > 20) {
+                    Allyear_salary['20+ years'].push(d.Salary);
+                };
+              });
+              return Allyear_salary;
+            };
+
+            var salary_groups = compute_salary_group (surveyResult);
+
+            let leftAxis = d3.axisLeft(salaryScale).tickFormat(function (d) {return "$"+ d/1000 + "K"});
+            let leftAxisG = annotations.append("g")
+                .attr("class", "axisBrown")
+                .attr("transform", `translate(${margin.left},${margin.top})`)
+                .call(leftAxis);
+            let leftGridlines = d3.axisLeft(salaryScale)
+                    .tickSize(-chartWidth-10)
+                    .tickFormat("")
+            annotations.append("g")
+                        .attr("class", "y gridlines")
+                        .attr("transform",`translate(${margin.left-10},${margin.top})`)
+                        .call(leftGridlines);
+            let bottomAxis = d3.axisBottom(yearGroupScale);
+            let bottomAxisG = annotations.append("g")
+                // .attr("class", "x axis")
+                .attr("class", "axisBrown")
+                .attr("transform", `translate(${margin.left},${chartHeight + margin.top})`)
+                .call(bottomAxis);
+
+            // Add title
+            linesvg.append("text")
+                .attr("class", "chartTitle")
+                .attr("x", width / 2 )
+                .attr("y", margin.top/2+ 10)
+                .style("text-anchor", "middle")
+                .text("Median Salaray by Years of Experience");
+
+            // Add X axis label:
+            linesvg.append("text")
+                .attr("text-anchor", "end")
+                .attr("class","arc_text")
+                .attr("x", width)
+                .attr("y", height - 10)
+                .text("Years of experience");
+
+            // Y axis label:
+            linesvg.append("text")
+                .attr("text-anchor", "end")
+                .attr("class","arc_text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 20)
+                .attr("x", -margin.top)
+                .text("Median salary(USD)")
+
+             // pie chart title
+             annosvg.append("text")
+                .attr("class", "chartTitle")
+                .attr("x", ranksWidth / 2 )
+                .attr("y", ranksMargin.top/2 +210 )
+                .style("text-anchor", "middle")
+                .text("Educational Attainment");
+            //rankchart title
+            annosvg.append("text")
+                .attr("class", "chartTitle")
+                .attr("x", ranksWidth / 2 )
+                .attr("y", ranksMargin.top/2 +10 )
+                .style("text-anchor", "middle")
+                .text("Most Popular Languages by Developer Type");
+            function updateBubblePlot(data, role) {
+                var rolename = getRoleName(role);  // get full role name
+                var language_dict = {};  // count LanguageWorkedWith
+                data.forEach(d=>{
+                    entryArray = d.LanguageWorkedWith.split(";");
+                    for(i of entryArray){
+                        if(i in language_dict){
+                            language_dict[i] += 1
+                        } else {
+                            language_dict[i] = 1
+                        }
+                    }
+                })
+
+                // sort language dict
+                var language_items = Object.keys(language_dict).map(function(key) {return [key, language_dict[key]]});
+                language_items.sort(function(first, second) {return second[1] - first[1]});
+                sorted_languages = language_items.slice(0, 6);
+                for(var i =0; i< sorted_languages.length;i++) {
+                    if(sorted_languages[i][0]==='Bash/Shell/PowerShell') {
+                        sorted_languages[i][0]='Bash';
+                    }
+                }
+
+                var roloecolor = roleScale(role);
+                var bubbleroleScale = d3.scaleLinear().domain([1,sorted_languages[0][1]]).range(["white", roloecolor])
+
+                const radiusScale = d3.scaleLinear().domain([0,5]).range([50, 25]);
+                function rankAxisScale (rank){
+                  padding = 10;
+                  rank_x = 0;
+                  for(i=0;i<=rank;i++) {
+                    if (i !== rank){
+                      rank_x += 2*radiusScale(i) + padding
+                    } else {
+                      rank_x += radiusScale(i);
+                    }
+                  }
+                  return rank_x
+                };
+                ranksChartArea.html('');
+                var languages = ranksChartArea.selectAll("circle").select(".iconCircle")
+                    .data(sorted_languages)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", (d,i) => rankAxisScale(i))
+                    .attr("cy", 100)
+                    .attr("fill", (d,i)=>bubbleroleScale(d[1]))
+                    .attr("stroke", "#EBDECF")
+                    .attr("stroke-width", 2)
+                    .attr("class", "iconCircle " + role)
+                    .attr("r", (d,i) => radiusScale(i));
+
+                // pie chart
+                var edu_dict = {};
+                data.forEach(d=>{
+                    d.EdLevel+="(";
+                    edu_level = d.EdLevel.substring(0,d.EdLevel.indexOf("(")-1);
+                    if(edu_level in edu_dict) {
+                        edu_dict[edu_level] += 1
+                    } else {
+                        edu_dict[edu_level] = 1
+                    }
+                })
+                var ed_sum = Object.keys(edu_dict).reduce((sum,key)=>sum+parseFloat(edu_dict[key]||0),0);
+                var edu_items = Object.keys(edu_dict).map(function(key) {return [key, edu_dict[key]]});
+                edu_items.sort(function(first, second) {return second[1] - first[1]});
+
+                var arc = d3.arc()
+                            .innerRadius(110)
+                            .outerRadius(140);
+                var edu_list = []
+                var others = 0;
+                var max = 0;
+                for (var i = 0;i<edu_items.length;i++){
+                    if(edu_items[i][0]==="Some college/university study without earning a degre") {
+                        edu_items[i][0] = "No college degree";
+                    }
+                    if(i<=3){  // put first four in the list
+                        edu_list.push({"key":edu_items[i][0],"value":edu_items[i][1]});
+                        max = Math.max(max,edu_items[i][1])
+                    } else {
+                        others += edu_items[i][1]
+                    }
+                }
+                var color = roleScale(role);
+                var pieroleScale = d3.scaleLog().domain([1,max]).range(["white", color])
+                edu_list.push({"key":"Others","value":others});
+                var pie = d3.pie().value(function(d) {return d.value; })
+                var data_ready = pie(edu_list);
+                var arcs = ranksChartArea.selectAll("arc")
+                    .data(data_ready)
+                    .enter()
+                    .append("g")
+                    .attr("transform", "translate(" + 250 + "," + 360 + ")");
+
+                // count total valid edu items
+                var total = 0;
+                for (var i = 0;i<data_ready.length;i++){
+                  total += data_ready[i].data.value;
+                };
+
+                    let mouseover = function (d) {
+                    annosvg.selectAll("path")
+                        .transition().duration(200)
+                        .style("opacity", 0.5)
+                    d3.select(this)
+                        .transition().duration(200)
+                        .style("opacity", 1);
+
+                        tooltip.style("left", d.pageX + 10 + "px")
+                        .style("top", d.pageY - 25 + "px")
+                        .style("display", "inline-block")
+                        .style("display", "inline-block")
+                        .style("opacity", 1)
+                        .html(d3.select(this).datum().data.key  + ": " + Math.round(d3.select(this).datum().data.value/total*100) + "%");
+                    }
+
+                    let mousemove = function (d) {
+                    tooltip
+                        .style("left", (d3.select(this)[0]+15) + "px")
+                        .style("top", (d3.select(this)[1]-25) + "px")
+                    }
+
+                    let mouseleave = function (d) {
+                    tooltip.style("display", "none");
+                    annosvg.selectAll("path")
+                    .transition().duration(200)
+                    .style("opacity", 1)
+                    }
+
+                    arcs.append("path")
+                    .attr("fill",d => pieroleScale(d.data.value))
+                    .attr("d", arc)
+                    .attr("class","arc_path")
+                    .on("mouseover", mouseover)
+                    .on("mousemove", mousemove)
+                    .on("mouseleave", mouseleave);
+
+                arcs.append("text")
+                    .attr("class","arc_text")
+                    .attr("transform",(d)=>{
+                            x = arc.centroid(d)[0];
+                            y = arc.centroid(d)[1];
+                            if(x>0) {
+                                x+=20;
+                            } else if(x<-23){
+                                x = x-(15+(d.data.key.length)*8);
+                            }
+                            if(y<0) {
+                                y -= 40;
+                            } else {
+                                y += 15;
+                            }
+
+                            return "translate(" + x + "," + y + ")";
+                   })
+                   .text(function(d){
+                    return d.data.key;
+                });
+
+                // pie chart tooltip
+                var tooltip = d3.select("#container").append("div")
+                  .attr("class", "tooltip")
+                  .style("background-color", "white")
+                  .style("border", "solid")
+                  .style("border-width", "1px")
+                  .style("border-radius", "5px")
+                  .style("padding", "10px")
+                  .style("position", "absolute")
+                  .style("display", "none");
+
+
+                function preloadImage(url)
+                {
+                    var img=new Image();
+                    img.src=url;
+                }
+
+                function getIconPath (languageName){
+                    // Turn "Bash/Shell/PowerShell" into "bash_shell_powershell"
+                    languageName = languageName.toLowerCase().replace(/\//g, '_');
+                    if (languageName == "c#") {
+                        languageName = "c_sharp";
+                    } else if (languageName == "c++") {
+                        languageName = "Cpp";
+                    }
+                    return link = './icons/languages/' + languageName + '.png'
+                }
+
+                ranksChartArea.selectAll("circle").select(".iconCircle")
+                .data(sorted_languages)
+                .enter()
+                .append("line")
+                .style("stroke", roleScale(role))
+                .attr("x1", (d,i) => rankAxisScale(i))
+                .attr("x2", (d,i) => rankAxisScale(i))
+                .attr("y1", 15)
+                .attr("y2", (d,i) => 100 - (radiusScale(i)))
+
+                ranksChartArea.selectAll("circle").select(".iconCircle")
+                .data(sorted_languages)
+                .enter()
+                .append("text")
+                .style("text-anchor","middle")
+                .attr("class","arc_text")
+                .attr("x", (d,i) => rankAxisScale(i))
+                .attr("y", 10)
+                .text(function(d) { return d[0]; })
+
+                ranksChartArea.selectAll("circle").select(".iconCircle")
+                .data(sorted_languages)
+                .enter()
+                .append('image')
+                .attr('xlink:href', d => {
+                  url = getIconPath (d[0]);
+                  preloadImage(url);
+                  return url;
+                })
+                .attr('width', (d,i) => radiusScale(i)*1.1)
+                // .attr('height', (d,i) => radiusScale(i)*2)
+                .attr("x", (d,i) => rankAxisScale(i) -radiusScale(i)*0.55)
+                .attr("y", 100-radiusScale(i)*1)
+                .attr("preserveAspectRatio","xMidYMid meet")
+                .attr("transform", (d,i) => {
+                  if (i === 0){
+                    return 'translate(0,-8)';
+                  } else if (i === 1){
+                    return 'translate(0,-4)';
+                  } else if (i === 4){
+                    return 'translate(0,3)';
+                  } else if (i === 5){
+                    return 'translate(0,5)';
+                  }
+                });
+                }
+
+            // update function passing data
+            function addLinePlot(data, role) {
+                year_salary = compute_salary_group (data);
+                let year_salary_result = []
+                for(i=0;i<yearGroupExtent.length;i++) {
+                    let year_group = yearGroupExtent[i];
+                    year_salary_result.push({"salary":Math.floor(d3.median(year_salary[year_group])* 100)/100, "year_group":year_group});
+                }
+
+                var lineGen = d3.line()
+                                .defined(d => !isNaN(d.salary))
+                                .x( d => yearGroupScale(d['year_group']))
+                                .y( d => salaryScale(d['salary']) )
+                                .curve(d3.curveMonotoneX);
+
+                chartArea.append("path")
+                        .datum(year_salary_result)
+                        .attr("class", "line " + role)
+                        .attr("fill", "none")
+                        .attr("stroke", roleScale(role))
+                        .attr("stroke-width", 3)
+                        .attr("d", lineGen);
+
+                chartArea.selectAll("circle").select(".lineCircle")
+                    .data(year_salary_result)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", d => yearGroupScale(d['year_group']))
+                    .attr("cy", d => salaryScale(d['salary']))
+                    .attr("fill", roleScale(role))
+                    .attr("stroke", "#f0f0f0")
+                    .attr("stroke-width", 1)
+                    .attr("class", "lineCircle " + role)
+                    .attr("r", 6)
+            }
+            function updateHover(data, role) {
+                year_salary = compute_salary_group (data);
+                let year_salary_result = []
+                for(i=0;i<yearGroupExtent.length;i++) {
+                    let year_group = yearGroupExtent[i];
+                    year_salary_result.push({"salary":Math.floor(d3.median(year_salary[year_group])* 100)/100, "year_group":year_group});
+                }
+                if (role === 'all'){
+                  console.log(year_salary_result)
+                }
+                let mouseGroup = chartArea.append("g");
+                let xMarker = mouseGroup.append("line")
+                    .attr("id","xMarker")
+                    .attr("class","hoverline")
+                    .attr("stroke-width",1)
+                    .attr("y1",0)
+                    .attr("y2",chartHeight)
+                    .attr("visibility","hidden");
+                let valueMarker = mouseGroup
+                    .append('image')
+                    .attr('xlink:href', url = './icons/developer.png')
+                    .attr("id","valueMarker")
+                    .attr("fill","none")
+                    .attr("stroke-width",2)
+                    .attr("width",40)
+                    .attr("height",40)
+                    .attr("visibility","hidden");
+
+                let valueMarker2 = mouseGroup
+                    .append('circle')
+                    .attr("id","valueMarker2")
+                    .attr("fill",roleScale(role))
+                    .attr("stroke","steelblue")
+                    .attr("stroke-width",2)
+                    .attr("r",10)
+                    .attr("visibility","hidden");
+
+                let label = mouseGroup.append("text")
+                    .attr("id","label")
+                    .attr("class","arc_text")
+                    .attr("visibility","hidden");
+                let label2 = mouseGroup.append("text")
+                    .attr("id","label2")
+                    .attr("class","arc_text")
+                    .attr("visibility","hidden");
+                let activeRegion = mouseGroup.append("rect")
+                    .attr("id","activeRegion")
+                    .attr("width",chartWidth+margin.right)
+                    .attr("height",chartHeight)
+                    .attr("fill","none")
+                    .attr("pointer-events","all");
+
+                // activeRegion is now the top-most item (even if invisible), so it should always catch the mouse events and never clash
+                activeRegion.on("mouseover", function() {
+                // Show the marker and label when mousing over
+                    xMarker.attr("visibility","");
+                    valueMarker.attr("visibility","");
+                    valueMarker2.attr("visibility","");
+                    label.attr("visibility","");
+                    label2.attr("visibility","");
+                });
+                activeRegion.on("mouseout", function() {
+                    // Hide them when mousing out of chart
+                    xMarker.attr("visibility","hidden");
+                    valueMarker.attr("visibility","hidden");
+                    valueMarker2.attr("visibility","hidden");
+                    label.attr("visibility","hidden");
+                    label2.attr("visibility","hidden");
+                });
+                activeRegion.on("mousemove", function(evt) {
+                    // // Get mouse location
+                    let location = d3.pointer(evt);
+                    let x = location[0];
+                    if(x<67.5) {
+                        index = 0;
+                    } else if(x<202.5) {
+                        index = 1;
+                    } else if(x<337.5) {
+                        index = 2;
+                    } else if(x<472.5) {
+                        index = 3;
+                    } else if(x<607.5) {
+                        index = 4;
+                    } else {
+                        index = 5;
+                    }
+
+                    let d = year_salary_result[index];
+                    // From there, it's just a matter of updating positions using our scales like we've done for a while now
+                    let xPos = yearGroupScale(d['year_group'])+ yearGroupScale.bandwidth() / 2;
+                    let yPos =  salaryScale(d['salary']);
+
+                    xMarker.attr("x1",xPos).attr("x2",xPos);
+
+                    // valueMarker.attr("cx",xPos).attr("cy",yPos);
+                    valueMarker.attr("x",xPos).attr("y",yPos);
+                    if (index === 5){
+                      valueMarker.attr("x",xPos-40).attr("y",yPos);
+                    }
+                    valueMarker2.attr("cx",xPos).attr("cy",yPos);
+
+                    let txt = "$" + d['salary']/1000 + "K";
+
+                    label.text(txt).attr("class","arc_text").attr("x",xPos+10).attr("y",yPos+2).attr("text-anchor","start").attr("dy", ".35em");
+                    if (role === 'all'){
+                      label2.text("Median for all: ").attr("class","arc_text").attr("x",xPos+10).attr("y",yPos+2).attr("text-anchor","start").attr("dy", "-1em");
+                    }
+
+                    if (index === 5){
+                      label.text(txt).attr("class","arc_text").attr("x",xPos-10).attr("y",yPos+2).attr("text-anchor","end").attr("dy", ".35em");
+                      if (role === 'all'){
+                        label2.text("Median for all: ").attr("class","arc_text").attr("x",xPos-10).attr("y",yPos+2).attr("text-anchor","end").attr("dy", "-1em");
+                      }
+                    }
+
+                    valueMarker.attr("visibility","");
+                    valueMarker2.attr("visibility","");
+                });
+            }
+            function updateLinePlot(data, role) {
+              if (role === 'all'){
+                chartArea.selectAll(".line").attr("opacity", 1);
+                chartArea.selectAll(".lineCircle").attr("opacity", 1);
+              } else {
+                chartArea.selectAll(".line").attr("opacity", 0.2);
+                chartArea.selectAll(".lineCircle").attr("opacity", 0.2);
+                chartArea.selectAll("." + role).attr("opacity", 1);
+              }
+            }
+            function updateAreaPlot(data, role) {
+                year_salary = compute_salary_group (data);
+                let year_salary_result = []
+                for(i=0;i<yearGroupExtent.length;i++) {
+                    let year_group = yearGroupExtent[i];
+                    year_salary_result.push({"salary":Math.floor(d3.median(year_salary[year_group])* 100)/100, "year_group":year_group});
+                }
+
+                var area = d3.area()
+                    .x(function(d) { return yearGroupScale(d['year_group'])})
+                    .y0( chartHeight )
+                    .y1(function(d) { return salaryScale(d['salary']) })
+                    .curve(d3.curveMonotoneX)
+
+                var rolecolor = roleScale(role)
+
+                chartArea.selectAll("#salary-gradient").remove()
+                chartArea.append("linearGradient")
+                .attr("id", "salary-gradient")
+                .attr("gradientUnits", "userSpaceOnUse")
+                .attr("x1", '0%').attr('y1', '0%')
+                .attr("x2", '0%').attr('y2', '100%')
+                .selectAll("stop")
+                .data([
+                {offset: "0%", color: rolecolor},
+                {offset: "100%", color: "transparent"}
+                ])
+                .enter().append("stop")
+                .attr("offset", function(d) { return d.offset; })
+                .attr("stop-color", function(d) { return d.color; });
+
+                chartArea.selectAll(".area").remove()
+                chartArea.append("path")
+                .lower()
+                .datum(year_salary_result)
+                .attr("class", "area")
+                .attr("d", area);
+
+            }
+            // draw all plots
+            addLinePlot(backend, 'backend');
+            addLinePlot(frontend, 'frontend');
+            addLinePlot(fullstack, 'fullstack');
+            addLinePlot(dataScientistEngineer, 'dataScientistEngineer');
+            addLinePlot(businessAnalyst, 'businessAnalyst');
+            addLinePlot(embedded, 'embedded');
+            addLinePlot(devOps, 'devOps');
+            addLinePlot(pm, 'pm');
+            updateHover(surveyResult, 'all');
+
+            var menuDiv = d3.select("div#mybutton");
+            var menuDiv2 = d3.select("div#mybutton2");
+
+            var ButtonAll = menuDiv.append("button")
+                    .style("background-color", roleScale('all'))
+                    .style("font-weight", "bold")
+                    .text('ALL DEVELOPERS')
+                    //.style("outline",roleScale('all'))
+                    .on('click', function(){
+                        updateLinePlot(surveyResult, 'all');
+                        updateBubblePlot(surveyResult, 'all');
+                        updateHover(surveyResult, 'all');
+                        chartArea.selectAll(".area").remove()
+
+                    });
+            var Button1 = menuDiv.append("button")
+                    .style("background-color", roleScale('backend'))
+                    .text("Backend developer")
+                    .on('click', function(){
+                        updateLinePlot(backend, 'backend');
+                        updateBubblePlot(backend, 'backend');
+                        //addLinePlot(backend, 'backend');
+                        updateHover(backend, 'backend');
+                        updateAreaPlot(backend, 'backend');
+                    });
+            var Button2 = menuDiv.append("button")
+                    .style("background-color", roleScale('frontend'))
+                    .text("Frontend developer")
+                    .on('click', function(){
+                        updateLinePlot(frontend, 'frontend');
+                        updateBubblePlot(frontend, 'frontend');
+                        //addLinePlot(frontend, 'frontend');
+                        updateHover(frontend, 'frontend');
+                        updateAreaPlot(frontend, 'frontend');
+                    });
+            var Button3 = menuDiv.append("button")
+                    .style("background-color", roleScale('fullstack'))
+                    .text("Fullstack developer")
+                    .on('click', function(){
+                        updateLinePlot(fullstack, 'fullstack');
+                        updateBubblePlot(fullstack, 'fullstack');
+                        //addLinePlot(fullstack, 'fullstack');
+                        updateHover(fullstack, 'fullstack');
+                        updateAreaPlot(fullstack, 'fullstack');
+                    });
+            var Button4 = menuDiv.append("button")
+                    .style("background-color", roleScale('dataScientistEngineer'))
+                    .text("Data scientist or data engineer")
+                    .on('click', function(){
+                        updateLinePlot(dataScientistEngineer, 'dataScientistEngineer');
+                        updateBubblePlot(dataScientistEngineer, 'dataScientistEngineer');
+                        //addLinePlot(dataScientistEngineer, 'dataScientistEngineer');
+                        updateHover(dataScientistEngineer, 'dataScientistEngineer');
+                        updateAreaPlot(dataScientistEngineer, 'dataScientistEngineer');
+                    });
+            var Button5 = menuDiv2.append("button")
+                    .style("background-color", roleScale('businessAnalyst'))
+                    .text("Data or business analyst")
+                    .on('click', function(){
+                        updateLinePlot(businessAnalyst, 'businessAnalyst');
+                        updateBubblePlot(businessAnalyst, 'businessAnalyst');
+                        //addLinePlot(businessAnalyst, 'businessAnalyst');
+                        updateHover(businessAnalyst, 'businessAnalyst');
+                        updateAreaPlot(businessAnalyst, 'businessAnalyst');
+                    });
+            var Button6 = menuDiv2.append("button")
+                    .style("background-color", roleScale('embedded'))
+                    .text("Embedded software engineer")
+                    .on('click', function(){
+                        updateLinePlot(embedded, 'embedded');
+                        updateBubblePlot(embedded, 'embedded');
+                        //addLinePlot(embedded, 'embedded');
+                        updateHover(embedded, 'embedded');
+                        updateAreaPlot(embedded, 'embedded');
+                    });
+            var Button7 = menuDiv2.append("button")
+                    .style("background-color", roleScale('devOps'))
+                    .text("DevOps/site reliability engineer")
+                    .on('click', function(){
+                        updateLinePlot(devOps, 'devOps');
+                        updateBubblePlot(devOps, 'devOps');
+                        //addLinePlot(devOps, 'devOps');
+                        updateHover(devOps, 'devOps');
+                        updateAreaPlot(devOps, 'devOps');
+                    });
+            var Button8 = menuDiv2.append("button")
+                    .style("background-color", roleScale('pm'))
+                    .text("Product manager")
+                    .on('click', function(){
+                        updateLinePlot(pm, 'pm');
+                        updateBubblePlot(pm, 'pm');
+                        //addLinePlot(pm, 'pm');
+                        updateHover(pm, 'pm');
+                        updateAreaPlot(pm, 'pm');
+                    });
+            function getRoleName(role) {
+                if(role==='backend'){
+                    rolename = 'Backend developer'
+                }
+                if(role==='frontend'){
+                    rolename = 'Frontend developer'
+                }
+                if(role==='fullstack'){
+                    rolename = 'Fullstack developer'
+                }
+                if(role==='dataScientistEngineer'){
+                    rolename = 'Data or business analyst'
+                }
+                if(role==='embedded'){
+                    rolename = 'Embedded software engineer'
+                }
+                if(role==='devOps'){
+                    rolename = 'DevOps or site reliability engineer'
+                }
+                if(role==='businessAnalyst'){
+                    rolename = 'Data or business analyst'
+                }
+                if(role==='pm'){
+                    rolename = 'Product manager'
+                }
+                if(role==='all'){
+                    rolename = 'All developer roles'
+                }
+                return rolename;
+            }
+            // draw default bubble plot & pie chart
+            updateBubblePlot(surveyResult, 'all');
+
+        })
+    </script>
+</body>
+</html>
