@@ -179,7 +179,7 @@ a:hover {
   padding: 1.5em
 }
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 800px) {
   #work {
       padding:5em;
       display: block
@@ -192,6 +192,15 @@ a:hover {
   .box {
       max-width: 500px;
       max-height: 500px
+  }
+
+   div.portrait {
+    margin-top: 100px;
+  } 
+
+  .banner {
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -516,8 +525,8 @@ margin-top: 24px;
     line-height: 2em;
     font-family: var(--sm--font);
     color: white;
-    padding-left: 320px;
-    padding-right: 320px;
+    /* padding-left: 320px;
+    padding-right: 320px; */
   }
   
   @keyframes wiggle {
