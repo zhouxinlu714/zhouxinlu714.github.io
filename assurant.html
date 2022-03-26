@@ -1,117 +1,410 @@
-<html lang="en">  
-    <html lang="en">
-        <head>
-          <!-- Required meta tags -->
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <!-- <link rel = "stylesheet" href = "style.css"> -->
-          <!-- <link rel = "stylesheet" href="project.css"> -->
-          <link rel = "stylesheet" href="project4.css">
-      
-          <!-- Bootstrap CSS -->
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-          <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
-      
-          <!-- aos CSS -->
-          <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 
-          <!-- Font -->
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
-          <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
-          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-          
-          <title>Daisy's portfolio</title>
-      
-        </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel = "stylesheet" href = "style.css"> -->
+  <!-- <link rel = "stylesheet" href="project.css"> -->
+  <link rel="stylesheet" href="project4.css">
 
-    <body>
-    </script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="./script.js"></script>
-        <div class="banner-container" data-aos="fade-up" style=background-color:#71acff>
-            <img class="position-absolute" src="Images/assurant-mock.png" style="width: 700px; left: 50%; bottom: -15%;">
-            <div class="project-title text-white position-absolute">
-                <h1>Assurant Website</h1>
-                <h4>UX&UI Redesign</h4>
-            </div>
-            <nav class = "navbar navbar-expand-lg navbar-dark py-4">
-                <div class = "container">
-                    <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50", height="50"></a>
-                    <button type = "button" class = "navbar-toggler border-0" data-bs-toggle = "collapse" data-bs-target = "#menuContent">
-                        <span class = "navbar-toggler-icon"></span>
-                    </button>
-        
-                    <div class="collapse navbar-collapse" id="menuContent">
-                        <ul class="navbar-nav ms-auto text-center">
-                          <!-- <li class="nav-item mx-lg-2">
-                            <a class="nav-link text-white fs-5" href="index.html">Home</a>
-                          </li> -->
-                          <li class="nav-item mx-lg-3">
-                            <a class="nav-link text-white fs-5" href="index.html#work">Work</a>
-                          </li>
-                          <li class="nav-item dropdown mx-lg-3">
-                            <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Data visualization
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="Info3300-Project2/index.html">Netflix</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="Info3300-Project3/index.html">US Developer Career Guide</a></li>
-                            </ul>
-                          </li>
-                          <li class="nav-item mx-lg-3">
-                            <a class="nav-link text-white fs-5" href="about2.html">About</a>
-                          </li>
-                          <li class="nav-item mx-lg-3">
-                            <a class="nav-link text-white fs-5"
-                            href="resume.pdf">Resume</a>                          
-                          </li>
-                          <!-- <li class="nav-item mx-lg-2">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
+
+  <!-- aos CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
+  <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <title>Daisy's portfolio</title>
+
+</head>
+
+<body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./script.js"></script>
+  <div class="banner-container overflow-hidden" data-aos="fade-up" style=background-color:#afd4f7>
+    <img class="position-absolute" src="Images/assurant/banner.png" style="width:55%;left:45%">
+    <div class="project-title text-white position-absolute">
+      <h1 class="text-dark ">Universal Navigation Website</h1>
+      <div>
+        <span class="badge rounded-pill bg-light text-dark">UI/UX Design</span>
+        <span class="badge rounded-pill bg-light text-dark">User Research</span>
+        <span class="badge rounded-pill bg-light text-dark">Web Design</span>
+      </div>
+      <div class="mt-4">
+        <img src="Images/assurant/assurant-logo.png" alt="">
+        <img class="ml-3" src="Images/assurant/cornell_cis_logo.png" alt="">
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark py-4">
+      <div class="container">
+        <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50" , height="50"></a>
+        <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menuContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuContent">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link text-white fs-5" href="index.html#work">Work</a>
+            </li>
+            <li class="nav-item dropdown mx-lg-3">
+              <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Data visualization
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Info3300-Project2/index.html">Netflix</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Info3300-Project3/index.html">US Developer Career Guide</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link text-white fs-5" href="about2.html">About</a>
+            </li>
+            <li class="nav-item mx-lg-3">
+              <a class="nav-link text-white fs-5" href="resume.pdf">Resume</a>
+            </li>
+            <!-- <li class="nav-item mx-lg-2">
                             <a class="nav-link text-white fs-5" href="index.html#contact">Get in Touch</a>
                           </li> -->
-                        </ul>
-                      </div>
-
-                </div>
-            </nav>
+          </ul>
         </div>
-        <!--  ======================= Overview ============================== -->
-        <div class="main-content col-8 mx-auto mt-5">
-            <section id="overview">
-                <div class="section-title" style="color:#2955A2">Overview</div>
-                <div class="row section-content">
-                    <div class="col-7">
-                    <div class="font-weight-bold">Our graduate capstone team spent three months researching and designing a global navigation system that  spans across multiple business systems and encourages products cross-selling.
-                    </div>
-                    <p>
-                    The final deliverable was designed in Figma and bridges existing Assurant lines of businesses, creating a cohesive one-stop hub that improves Assurant brand awareness, product retention, and sales. Along with this,  we developed a slew of UX artifacts, detailing work that we carried out throughout the UX journey; this includes surveys,  interview protocols, affinity maps, personas, user journeys, information architecture,  wireframes, and user test insights. 
-                    </p>
-                 </div>
-                    <div class="col-5">
-                    MPS Capstone Project
-                    <br>
-                    <br>
-                    <span class="bold" style="color:#2955A2">Tools:</span> Figma Miro
-                    <br>
-                    <br>
-                    <span class="bold" style="color:#2955A2">Skills:</span> User Research, Ideation, Business Analysis, Rapid Prototyping, User Testing, Visual Design
-                    <br>
-                    <br>
-                    <span class="bold" style="color:#2955A2">Timeline:</span> 3 months (August - December 2021)
-                    </div>
-                </div>
-            </section>
 
-            <section id="design-process">
-                <div class="section-title" style="color:#2955A2">Design Process</div>
-                <img class="w-100"src="Images/design-process.png">
-            </section>
-            <div class="text-center mt-5">
-                <h1>Want to know more?</h1>
-                <h4 class="mt-3 text-secondary">Due to an NDA, I can't share my experience publicly. Reach out and I would love to talk.</h4>
-                <button type="button" class="btn btn-dark btn-lg fs-4 mt-5 mb-5" href="mailto:xz633@cornell.edu">Let's chat</button>
+      </div>
+    </nav>
+  </div>
+
+  <!--  ======================= Overview ============================== -->
+  <div class="main-content col-8 mx-auto mt-5">
+    <section id="overview">
+      <div class="section-title text-center" style="color:#2955A2">Overview</div>
+      <div class="row section-content">
+        <div class="col-7">
+          <p>Assurant inc is a global provider of risk management products and services. Its businesses provide a
+            diverse set of specialty and niche-market insurance products within the property, casualty, and extended
+            device protection. <span class="bold">The project goal was to deliver an interactive, high-fidelity
+              prototype that thoroughly explores global navigation and cross sales opportunities informed by user
+              research and business objectives.</span> This navigation UI was implemented on top of several end user
+            applications that support purchase of new insurance products, service existing policies, get support and
+            file claims on insured items. Our final deliverable increased <span class="bold">brand awareness, product
+              retention, and sales for the company.</span></p>
+        </div>
+        <div class="col-5">
+          <span class="bold" style="color:#2955A2">My role:</span> UI/UX Designer, UX Researcher
+          <br>
+          <br>
+          <span class="bold" style="color:#2955A2">Tools:</span> Figma Miro
+          <br>
+          <br>
+          <span class="bold" style="color:#2955A2">Skills:</span> User Research, Ideation, Business Analysis, Rapid
+          Prototyping, User Testing, Visual Design
+          <br>
+          <br>
+          <span class="bold" style="color:#2955A2">Duration:</span> 3 months
+        </div>
+      </div>
+    </section>
+
+    <!--  ======================= HWM ============================== -->
+    <section id="hmw" class="mt-5">
+      <div class="row">
+        <div class="col-2">
+          <img src="Images/hmw.svg" style="padding-top: 1em;" width=50% alt="Daisy">
+        </div>
+        <div class="col-10" style="color:#0066CC">
+          <h2><em>Assurant's various lines of business and products are hosted independently, making it difficult for
+              clients to travel across different business lines or products</em></h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Feature ==============================  -->
+    <!-- <section id="research" class="mt-5">
+      <div class="section-title text-center" style="color:#0066CC">Solution</div>
+      <p class="section-content">Our final solution is an integrated one-stop-hub that provides global consumers
+        navigation across all Assurant products. Our final solution consists of three key sections:</p>
+      <div class="row text-center">
+        <div class="col-sm">
+          <video autoplay loop width="50%">
+            <source src="Images/chase/function3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="col-sm" style="margin-top: 100px;">
+          <h3 style="color:#165DA4">Get a Quote</h3>
+          <p>The major purpose of this page is for clients to be able to easily explore all of Assurant's featured
+            products, learn about each popular bundle and its associated advantages, and then get a quote for their
+            chosen options.
+          </p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm" style="margin-top: 100px;">
+          <h3 style="color:#165DA4">Product Discovery</h3>
+          <p>Under “All Products” tab, all the insurance products and services that Assurant offered are displayed in
+            cards, where users can navigate to different product information subpage and file a claim for any insurance
+            they have already purchased.</p>
+        </div>
+        <div class="col-sm">
+          <video autoplay loop width="50%">
+            <source src="Images/chase/function4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm">
+          <video autoplay loop width="50%">
+            <source src="Images/chase/function3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="col-sm" style="margin-top: 100px;">
+          <h3 style="color:#165DA4">Portfolio</h3>
+          <p>Users can manage their current insurance policies, see how much money they've saved, and look into other
+            coverage options, allowing them to take advantage of all of the company's benefits and look into more
+            coverage as needed.
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+    <!--  ======================= design-process ============================== -->
+    <section id="design-process">
+      <div class="section-title text-center" style="color:#2955A2">Design Process</div>
+      <img class="w-100" src="Images/design-process.png">
+    </section>
+
+    <!--  ======================= Research ============================== -->
+    <!-- <section id="research" class="mt-5">
+      <div class="section-title text-center" style="color:#EFAF00">Research</div>
+      <div class="section-content">
+        <p>Before the project started, we made a simple questionnaire with potential users to understand their basic
+          needs in insurance purchasing. 68 valid responses were collected with a age rang of 18-70, and then summarized
+          out insights below:</p>
+        <div class="mx-auto mt-3" style="width: 800px;" data-aos="fade-up" data-aos-duration="3000">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="ccol-md-5 card-container w-100">
+                <img class="mx-auto d-block" src="Images/assurant/survey1.png" alt="survey result">
+                <h5 class="text-center mt-3 bold">Common perspectives</h5>
+                <ul>
+                  <li>Care about benefits</li>
+                  <li>Like simple user experiences</li>
+                </ul>
+              </div>
+              <div class="col-md-5 card-container w-100">
+                <img class="mx-auto d-block" src="Images/assurant/survey2.png" alt="survey result">
+                <h5 class="text-center mt-3 bold">Divergent perspectives</h5>
+                <ul>
+                  <li>Purchasing from one vs. multiple companies</li>
+                  <li>Mode of filing claims</li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
 
+        <h3 class="text-dark section-subtitle">Interview & Affinity Mapping </h3>
+        <p>We interviewed 4 insurance buyers in different age ranges and backgrounds to better understand how they
+          currently purchase insurance products, file claims, and detect potential concerns.</p>
+        <div class="mx-auto mt-3" style="width: 800px;">
+          <img src="Images/assurant/affinity-map.png" alt="Daisy" width="100%" data-aos="fade-up"
+            data-aos-duration="2000">
+        </div>
+        <h3 class="text-dark section-subtitle">Insight</h3>
+        <p>The insignts we sythesize from the interviews are below: </p>
+        <div class="card mb-3 p-3 bg-light">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex justify-content-center">
+              <img src="Images/assurant/motive.svg" class="img-fluid rounded-start d-block mx-auto top-50" alt="motive">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Motives</h5>
+                <p class="card-text">1. Saving money<br>
+                  2. Prioritizing recommendations from people they trust over online research<br>
+                  3. Buying insurance when mandatory (e.g. homes or cars). </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 p-3 bg-light">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="Images/assurant/creativity.png" class="img-fluid rounded-start d-block mx-auto" alt="motive">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"> Beliefs</h5>
+                <p class="card-text"> 1. Persons prefering to buy insurance from the same company because of portfolio
+                  management convenience and bundled discounts<br>
+                  2. Persons who do not see the benefit of purchasing insurance products from the same company because
+                  of insignificance of perceived time/effort saved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 p-3 bg-light">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="Images/assurant/fear.svg" class="img-fluid rounded-start d-block mx-auto" alt="motive">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"> Fears</h5>
+                <p class="card-text"> 1. Wasting time filling out forms<br>
+                  2. Waiting on hold when buying insurance and filing claims<br>
+                  3. Missing out on information that will save them money<br>
+                  4. Dislike receiving targeted insurance ads (spam)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="text-dark section-subtitle">Personas</h4>
+        <p>We built two persona based on the interview insights as follows</p>
+        <img src="Images/assurant/personas1.png" alt="personas1" width="100%" data-aos="fade-up"
+          data-aos-duration="2000">
+        <img src="Images/assurant/personas2.png" class="mt-3" alt="personas2" width="100%" data-aos="fade-up"
+          data-aos-duration="2000">
+
+
+        <h4 class="text-dark section-subtitle">Journey map</h4>
+        <p>We built two persona based on the interview insights as follows</p>
+        <div class="row">
+          <div class="col-md-8">
+            <img src="Images/assurant/journey-map.png" alt="personas1" width="100%" data-aos="fade-up"
+              data-aos-duration="2000">
+          </div>
+          <div class="col-md-4">
+            <h4 class="bold">Discovery Phase</h4>
+            <ul>
+              <li>Increase efficiency for quote process by introducing a "Get a Quote" button.</li>
+              <li>Show all available products upfront, which can be selected individually.</li>
+              <li>Show price for each service/product.</li>
+            </ul>
+            <h4 class="bold">Purchasing Phase</h4>
+            <ul>
+              <li>Introduce a way to easily compare policy offerings </li>
+              <li>A section to introduce bundle packages that allow for more savings.</li>
+              <li>Nudge customers to make bundle purchases by showing potential savings benefits.</li>
+              <li>Provide easy-to-understand information on </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section id="Problem Statement">
+      <div class="section-title text-center" style="color:#2955A2">Problem Statement</div>
+      <div class="row section-content justify-content-center">
+        <div class="col-10">
+          <h1 class="position-relative bold" style="font-size: 4em;color: #ffbc0580;top:0.6em;">1</h1>
+          <h3>How Might We improve customers’ awareness of Assurant’s other products and increase cross-product sales?
+          </h3>
+        </div>
+        <div class="col-10">
+          <h1 class="position-relative bold" style="font-size: 4em;color: #ffbc0580;top:0.6em;">2</h1>
+          <h3>How to save users time & effort while purchasing & managing a multi-product Assurant portfolio. </h3>
+
+        </div>
+      </div>
+    </section> -->
+<!-- 
+    <section id="Problem Statement">
+      <div class="section-title text-center" style="color:#2955A2">Design</div>
+      <div class="row section-content justify-content-center">
+        <h4 class="text-dark section-subtitle">User Flow</h4>
+        <img src="Images/assurant/user-flow.png" alt="user flow">
+        <h4 class="text-dark section-subtitle">Information architecture</h4>
+        <img src="Images/assurant/ia.png" alt="ia">
+
+        <div>
+            <h4 class="mt-5">Wireframe</h4>
+            <img src="Images/recipebook/mealplan.png" alt="" width="100%" data-aos="fade-left" data-aos-duration="2000">
+      </div>
+    </section> -->
+<!-- 
+    <section id="Problem Statement">
+      <div class="section-title text-center" style="color:#2955A2">Design Iteration</div>
+      <div class="row section-content justify-content-center">
+      
+
+      </div>
+    
+    </section> -->
+
+
+
+
+        <!-- Reflection -->
+        <!-- <section>
+          <div class="section-title" style="color:#EFAF00">Learning&Reflection</div>
+          <div class="section-content"> -->
+              <!-- <div class="row">
+                  <div class="col-3">
+                      What I learned
+                  </div>
+                  <div class="col-9">
+                      <strong>Team efficiency & Communication</strong>
+                      <p>We employed agile methodology to complete this project from user research, UX design, to
+                          create interactive prototype with vue.js at final stage. Even though the team was splitter
+                          into designers and developers, it is important to help the entire team better understanding
+                          who we're designing for and product vision.</p>
+
+                      <strong>Feedback </strong>
+                      <p>Feedback is a key indicator of user experience design. It can provide users comfort,
+                          confidence, and a sense of security, which allows them to trust the product and gain more
+                          motivation while using with it. </p>
+                  </div>
+              </div> -->
+
+              <!-- <div class="row">
+                  <div class="col-3">
+                      Where to improve
+                  </div>
+                  <div class="col-9">
+                      <strong>Further User Tests</strong>
+                      <p>Additional user tests can be conducted for the hi-fi prototype to support findings discovered from out initial user test insights</p>
+
+                      <strong>Technical Assessment</strong>
+                      <p>Working with developers to map out the feasibility of the data integration for this one-stop hub proposal.Iterate/compromise designs where necessary
+                      </p>
+                      <strong>Pricing Strategies</strong>
+                      <p>Working with sales teams to identify cross-product sales strategies
+                        Identifying popular bundle 
+                      </p>
+                      <strong>Customer Transition</strong>
+                      <p>Understanding the transition impact on current customers
+                        Plan tools to facilitate the transition (i.e tutorials, etc.)
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section> -->
+
+
+  </div>
+  <div class="text-center mt-5">
+      <h1>Want to know more?</h1>
+      <h4 class="mt-3 text-secondary">Due to an NDA, I can't share my experience publicly. Reach out and I would love to
+        talk.</h4>
+      <button type="button" class="btn btn-dark btn-lg fs-4 mt-5 mb-5" href="mailto:xz633@cornell.edu">Let's
+        chat</button>
+    </div>
+
+</html>

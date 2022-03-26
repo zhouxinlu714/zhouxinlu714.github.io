@@ -223,6 +223,10 @@ a:hover {
   transition: all ease .5s
 }
 
+/* .box a {
+  display: block;
+
+} */
 .box1 {
   height: 30em;
   background: #834dc3;
@@ -653,7 +657,7 @@ margin-top: 24px;
   }
   
   .bubble {
-    width: 80%;
+    max-width: 400px;
     padding: 0 10px;
   }
   
@@ -663,13 +667,27 @@ margin-top: 24px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 60px;
-    overflow: hidden;
+    height: 120px;
+    /* overflow: hidden; */
   
     font-family: var(--sm--font);
     font-size: 20px;
     line-height: 40px;
-    background-color: rgb(31, 31, 31);
+    background-color: rgba(31, 31, 31, 0.7);
+    border-radius: 30px;
+  }
+
+  .content::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 100px;
+    right: auto;
+    top: auto;
+    bottom: -24px;
+    border: 12px solid;
+    border-color: rgba(31, 31, 31, 0.7) rgba(31, 31, 31, 0.7) transparent transparent;
   }
   
     .content__container {
@@ -709,11 +727,11 @@ margin-top: 24px;
       }
   
       .content__container__text {
-        display: inline;
-        float: left;
-        padding-left: 15px;
+        /* display: inline;
+        float: left; */
         color: rgb(226, 226, 226);
-        font-size: 1em;
+        font-size: 1.2em;
+        text-align: center;
       }
   
       .content__container__list {
@@ -722,6 +740,7 @@ margin-top: 24px;
         text-align: left;
         list-style: none;
         color: #ffb341;
+        font-size: 1.5em;
   
         -webkit-animation-name: change;
         -webkit-animation-duration: 10s;

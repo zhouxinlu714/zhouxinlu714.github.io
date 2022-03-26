@@ -46,7 +46,7 @@ section {
 }
 
 .project-title h1{
-    font-size: 64px;
+    font-size: 4em;
 }
 
 .project-title h5{
@@ -91,4 +91,11 @@ section {
 .bold {
     font-weight: 700;
     color: black;
+}
+
+.card-container {
+    background-color: #F0F8FF;
+    border-radius: 8px;
+    padding: 1em 2em;
+    margin:1em
 }
