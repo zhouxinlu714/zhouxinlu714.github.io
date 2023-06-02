@@ -2,181 +2,198 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css">
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-    <title>Daisy's portfolio</title>
-    <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-        }
+  <title>Daisy's portfolio</title>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-        .card{
-          border: none;
-        }
+    .card {
+      border: none;
+    }
 
-        .card-img{
-          object-fit: cover;
-          margin: auto;
-  display: block;
-        }
-  
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-      </style>
+    .card-img {
+      object-fit: cover;
+      margin: auto;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
 
 </head>
 
 <body>
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-<script>
-  window.onscroll = function () { scrollFunction() };
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    window.onscroll = function () { scrollFunction() };
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar").style.backgroundColor = "orange";
-      document.getElementById("navbar").style.height = "65px";
-    } else {
-      document.getElementById("navbar").style.backgroundColor = "transparent";
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navbar").style.backgroundColor = "orange";
+        document.getElementById("navbar").style.height = "65px";
+      } else {
+        document.getElementById("navbar").style.backgroundColor = "transparent";
+      }
     }
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
 
 
-    <!--  ======================= Start Header Area ============================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-4">
-      <div class="container">
-          <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50" , height="50"></a>
-          <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse"
-              data-bs-target="#menuContent">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+  <!--  ======================= Start Header Area ============================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-4">
+    <div class="container">
+      <a href="/" class="navbar-brand mb-0"><img src="Images/Logo.png" width="50" , height="50"></a>
+      <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menuContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <div class="collapse navbar-collapse" id="menuContent">
-              <ul class="navbar-nav ms-auto text-center">
-                  <!-- <li class="nav-item mx-lg-2">
+      <div class="collapse navbar-collapse" id="menuContent">
+        <ul class="navbar-nav ms-auto text-center">
+          <!-- <li class="nav-item mx-lg-2">
                       <a class="nav-link text-white fs-5" href="index.html">Home</a>
                     </li> -->
-                  <li class="nav-item mx-lg-3">
-                      <a class="nav-link text-white fs-5" href="index.html#work">Work</a>
-                  </li>
-                  <li class="nav-item mx-lg-3">
-                      <a class="nav-link text-white fs-5" href="about2.html">About</a>
-                  </li>
-                  <li class="nav-item mx-lg-3">
-                      <a class="nav-link text-white fs-5"
-                      href="resume.pdf">Resume</a>
-                  </li>
-                  <li class="nav-item mx-lg-2">
-                      <a class="nav-link text-white fs-5" href="index.html#contact">Get in Touch</a>
-                  </li>
-              </ul>
-          </div>
-
+          <li class="nav-item mx-lg-3">
+            <a class="nav-link text-white fs-5" href="index.html#work">Work</a>
+          </li>
+          <li class="nav-item mx-lg-3">
+            <a class="nav-link text-white fs-5" href="about2.html">About</a>
+          </li>
+          <li class="nav-item mx-lg-3">
+            <a class="nav-link text-white fs-5" href="resume.pdf">Resume</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link text-white fs-5" href="index.html#contact">Get in Touch</a>
+          </li>
+        </ul>
       </div>
+
+    </div>
   </nav>
 
-    <!--  ======================= Banner Area ============================== -->
-    <div class="container" style="margin-top: 150px;">
-        <!-- <div class="row text-white">
+  <!--  ======================= Banner Area ============================== -->
+  <div class="container" style="margin-top: 150px;">
+    <!-- <div class="row text-white">
             <div class="col-12">
                 <h1>A little bit more about me...</h1>
             </div>
         </div> -->
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <img src="Images/about.JPG" alt="Daisy" style="width: 70%; border-radius: 15px;">
-            </div>
-            <div class="col-md-6">
-                <h1 class="text-warning">Hey there, I'm Daisy !</h1>
-                <div class="fs-5" style="color: rgb(216, 216, 216);">
-                  <p>Currently I’m a graduate student from <span class="color-text">Cornell University @information science</span>, studying user experience design. </p>
-                  <p>I am a biologist turned product designer and my interdisciplinary backgrounds in human biology, cognitive science and information science give me an unique perspective of human-centered design. I view my mind as a scientist and a storyteller. I understand both the biological basis of thought and the contextual/inner factors that impact how human perceive outside world, which allows me to make informed design decisions. As a foodie blogger, I learned how tiny aesthetic changes and information hierarchy influence audience preferences. My research experience at a <a href="https://research.cornell.edu/content/virtual-embodiment-lab" style="color: goldenrod;">virtual embodiment lab</a> has taught me the value of inclusive design. Co-founding the first <a href="https://ucsdtriplec.org/" style="color: goldenrod;">projects incubater</a> club at UCSD has made me realized the power of design impact.</p>
-                  <p>I am a fast-learner and always passioned to learn new technology, such as big data, and virtual reality! I aspire to apply my diverse expertises and design thinking to make design more enjoyable and accessible for everyone.</p>
-                </div>
-            </div>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="Images/about.JPG" alt="Daisy" style="width: 70%; border-radius: 15px;">
+      </div>
+      <div class="col-md-6">
+        <h1 class="text-warning">Hey there, I'm Daisy !</h1>
+        <div class="fs-5" style="color: rgb(216, 216, 216);">
+          <p>I'm a UX designer at <a
+              href="https://powerpages.microsoft.com/en-us/?ef_id=_k_CjwKCAjwpuajBhBpEiwA_ZtfhWN1Lt1APAPWCHsOljYOTgcFXstPPs6o5kJrk04_JvOCQYTo4F8P-xoC7DkQAvD_BwE_k_&OCID=AIDcmm90q7bk03_SEM__k_CjwKCAjwpuajBhBpEiwA_ZtfhWN1Lt1APAPWCHsOljYOTgcFXstPPs6o5kJrk04_JvOCQYTo4F8P-xoC7DkQAvD_BwE_k_&gad=1&gclid=CjwKCAjwpuajBhBpEiwA_ZtfhWN1Lt1APAPWCHsOljYOTgcFXstPPs6o5kJrk04_JvOCQYTo4F8P-xoC7DkQAvD_BwE"
+              style="color: goldenrod;">@Microsoft Power Pages</a> and before I studied user experience design at
+            <span class="color-text">Cornell University @information
+              science</span>
+          </p>
+          <p>I am a biologist turned product designer and my interdisciplinary backgrounds in human biology, cognitive
+            science and information science give me an unique perspective of human-centered design. I view my mind as a
+            scientist and a storyteller. I understand both the biological basis of thought and the contextual/inner
+            factors that impact how human perceive outside world, which allows me to make informed design decisions. As
+            a foodie blogger, I learned how tiny aesthetic changes and information hierarchy influence audience
+            preferences. My research experience at a <a
+              href="https://research.cornell.edu/content/virtual-embodiment-lab" style="color: goldenrod;">virtual
+              embodiment lab</a> has taught me the value of inclusive design. Co-founding the first <a
+              href="https://ucsdtriplec.org/" style="color: goldenrod;">projects incubater</a> club at UCSD has made me
+            realized the power of design impact.</p>
+          <p>I am a fast-learner and always passioned to learn new technology, such as big data, and virtual reality! I
+            aspire to apply my diverse expertises and design thinking to make design more enjoyable and accessible for
+            everyone.</p>
         </div>
-        <div class="row text-white" style="margin-top: 100px;">
-            <div class="col-12 mb-5">
-                <h1>When I am not designing</h1>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col">
-                <img src="Images/1.gif" alt="Daisy" height="48px" width="48px">
-                <span class="text-white fs-4">hanging out with friends</span>
-            </div>
-            <div class="col">
-                <img src="Images/2.gif" alt="Daisy" height="48px" width="48px">
-                <span class="text-white fs-4">Singing with my twin sister</span>
-            </div>
-            <div class="col">
-                <img src="Images/3.gif" alt="Daisy" height="48px" width="48px">
-                <span class="text-white fs-4">Cooking and exploring new recipes</span>
-            </div>
-          </div>
+      </div>
     </div>
+    <div class="row text-white" style="margin-top: 100px;">
+      <div class="col-12 mb-5">
+        <h1>When I am not designing</h1>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col">
+        <img src="Images/1.gif" alt="Daisy" height="48px" width="48px">
+        <span class="text-white fs-4">hanging out with friends</span>
+      </div>
+      <div class="col">
+        <img src="Images/2.gif" alt="Daisy" height="48px" width="48px">
+        <span class="text-white fs-4">Singing with my twin sister</span>
+      </div>
+      <div class="col">
+        <img src="Images/3.gif" alt="Daisy" height="48px" width="48px">
+        <span class="text-white fs-4">Cooking and exploring new recipes</span>
+      </div>
+    </div>
+  </div>
 
 
-    <main class="container py-5">
-      <div class="row text-white" style="margin-top: 100px;">
-        <div class="col-12 mb-5">
-          <h1>Places & Things I love</h1>
-        </div>
+  <main class="container py-5">
+    <div class="row text-white" style="margin-top: 100px;">
+      <div class="col-12 mb-5">
+        <h1>Places & Things I love</h1>
+      </div>
     </div>
-        <!-- <hr class="my-5"> -->
-      
-        <div class="row" data-masonry='{"percentPosition": true }'>
-          <!-- <div class="col-sm-6 col-lg-4 mb-4">
+    <!-- <hr class="my-5"> -->
+
+    <div class="row" data-masonry='{"percentPosition": true }'>
+      <!-- <div class="col-sm-6 col-lg-4 mb-4">
             <div class="card">
                 <img src="Images/chase.png" width="100%" height="200" class="card-img-top" alt="..."> -->
-              <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
-      
-              <!-- <div class="card-body">
+      <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
+
+      <!-- <div class="card-body">
                 <h5 class="card-title">Card title that wraps to a new line</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
             </div>
           </div> -->
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card p-3">
-              <figure class="p-3 mb-0">
-                <blockquote class="blockquote">
-                  <p>Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.</p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0 text-muted">
-                  Steve Jobs <cite title="Source Title"></cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <!-- <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card p-3">
+          <figure class="p-3 mb-0">
+            <blockquote class="blockquote">
+              <p>Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with
+                improving your other innovations.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-muted">
+              Steve Jobs <cite title="Source Title"></cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <!-- <div class="col-sm-6 col-lg-4 mb-4">
             <div class="card">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
               <div class="card-body">
@@ -186,7 +203,7 @@
               </div>
             </div>
           </div> -->
-          <!-- <div class="col-sm-6 col-lg-4 mb-4">
+      <!-- <div class="col-sm-6 col-lg-4 mb-4">
             <div class="card text-center">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -195,60 +212,77 @@
               </div>
             </div>
           </div> -->
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav1.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav2.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav3.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card text-white text-center p-3" style="background-color: rgb(248, 155, 34);">
-              <figure class="mb-0">
-                <blockquote class="blockquote">
-                  <p>“Good design is actually a lot harder to notice than poor design, in part because good designs fit our needs so well that the design is invisible,”
-                  </p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0 text-white">
-                  Donald A. Norman in <cite title="Source Title">The Design of Everyday Things</cite>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav4.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav5.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav6.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav7.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-              <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav8.jpg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title></img>
-            </div>
-          </div>
-          <!-- <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav1.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav2.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav3.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card text-white text-center p-3" style="background-color: rgb(248, 155, 34);">
+          <figure class="mb-0">
+            <blockquote class="blockquote">
+              <p>“Good design is actually a lot harder to notice than poor design, in part because good designs fit our
+                needs so well that the design is invisible,”
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-white">
+              Donald A. Norman in <cite title="Source Title">The Design of Everyday Things</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav4.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav5.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav6.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav7.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img " width="100%" height="260" src="Images/fav8.jpg" role="img"
+            aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title></img>
+        </div>
+      </div>
+      <!-- <div class="col-sm-6 col-lg-4 mb-4">
             <div class="card p-3 text-end">
               <figure class="mb-0">
                 <blockquote class="blockquote">
@@ -260,7 +294,7 @@
               </figure>
             </div>
           </div> -->
-          <!-- <div class="col-sm-6 col-lg-4 mb-4">
+      <!-- <div class="col-sm-6 col-lg-4 mb-4">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -269,9 +303,9 @@
               </div>
             </div>
           </div> -->
-        </div>
-      
-      </main>
+    </div>
+
+  </main>
 
 </body>
 
