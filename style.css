@@ -143,9 +143,9 @@ h1, h2, h3{
 margin-top: 100px;
 }
 
-p {
+/* p {
   font-size: 16px
-}
+} */
 
 a:active,a:link,a:visited {
   color: #171717;
@@ -160,6 +160,21 @@ a:hover {
 /* #grid {
   background-color: #f5f9fb
 } */
+
+#msft {
+  width: 100vw;
+  max-width: 1600px;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#msft>div {
+  display: flex;
+  flex-basis: calc((40% - 100px) * 2 + 80px);
+  padding: 1.8em
+}
 
 #work {
   width: 100vw;
@@ -176,13 +191,24 @@ a:hover {
 #work>div {
   display: flex;
   flex-basis: calc(40% - 100px);
-  padding: 1.5em
+  padding: 1.8em
 }
 
 @media screen and (max-width: 800px) {
+
+  #msft {
+    padding:5em;
+    display: block
+  }
+
+  #msft>div {
+    padding:5em;
+    display: block
+  }
+
   #work {
-      padding:5em;
-      display: block
+    padding:5em;
+    display: block
   }
 
   #work>div {
@@ -206,11 +232,15 @@ a:hover {
 
 @media screen and (max-width: 568px) {
   #work {
-      padding:0.5em
+    padding:0.5em
   }
 
+  #msft {
+    padding:0.5em
+  }
+  
   .box {
-      max-height: 400px
+    max-height: 400px
   }
 }
 
@@ -236,6 +266,15 @@ a:hover {
   display: block;
 
 } */
+.feature-box {
+  height: 30em;
+  background: #834dc3;
+  background-image: url(Images/pp.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+
 .box1 {
   height: 30em;
   background: #834dc3;
